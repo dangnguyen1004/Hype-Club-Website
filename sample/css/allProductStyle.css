@@ -1036,6 +1036,7 @@ header .top-bar .inner-bar a {
 @media(max-width: 767px) {
     .home h1 {
         font-size: 40px;
+
     }
     .header .container{
         display: block
