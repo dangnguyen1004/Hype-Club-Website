@@ -309,12 +309,10 @@
             
             current=current+id;
             
-            if (current>0 && current<=6) {
             
+            if (current<=0) current=6;
+            if (current>6) current=1;
             document.images['img_product'].src = 'images/des_page/img' + current + '.jpg';
-            } 
-            if (current<=0) current=1;
-            if (current>6) current=6;
         }
 
         //show modal
