@@ -1037,6 +1037,21 @@ header .top-bar .inner-bar a {
     .home h1 {
         font-size: 40px;
     }
+    .header .container{
+        display: block
+    }
+    .header .container .top-bar {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 0px;
+    }
+    .header .container .top-bar .inner-bar {
+        /* width: 25%; */
+        text-align: center;
+    }
     .about .content {
         flex-wrap: wrap;
     }
@@ -1080,12 +1095,38 @@ header .top-bar .inner-bar a {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .price-package .container .topProductTitle{
+        padding-top: 90px;
+    }
     .price-package .content {
         flex-wrap: wrap;
     }
     .price-package .content .box {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .price-package .content .box .text p {
+        font-size: 60px;
+    }
+
+
+    .price-package .content2{
+        flex-wrap: wrap;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    .price-package .content2 .box{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+    .price-package .content2 .box h2{
+        font-size: 40px;
+    }
+    #subtext{
+        margin-bottom: 10px;
+        font-size: 20px;
     }
     .contact .content {
         flex-wrap: wrap;
