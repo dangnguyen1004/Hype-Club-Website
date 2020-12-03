@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* { 
+    padding: 0; 
+    margin: 0; 
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+a { text-decoration: none; color: #F0EADC; }
+li { list-style-type: none; }
+.menu {
+	width: 200px;
+	height: 100%;
+    position: absolute;
+    background: #070e31;
+    
+    z-index: 2;
+    display: none;
+   
+    
+}
+.menu ul li a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: rgb(132, 134, 168);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}  
+.menu ul ul li a{
+    background: #162053;
+}  
+.menu ul ul {
+    display: none;
+}  
+.menu ul :hover > ul {
+    display: block;
+}  
+.menu ul li a:hover {
+    background: #040b2b ;
+}
+.menu ul li a:hover {
+    color: rgb(82, 81, 81);
+}
+   
+.menu ul li a .fa{
+    width: 24px;
+}
+.menu ul li a .fas{
+    font-size: 10px;
+    right: 16px;
+    position: absolute;
+}

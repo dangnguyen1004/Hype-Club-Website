@@ -1,0 +1,27 @@
+
+.title {
+    position: absolute;
+    width: 86%;
+    height: 20px;
+    padding: 15px 0;
+    top: 55px;
+    left: 200px;
+    display: block;
+    background: rgb(174, 175, 177);
+}
+.title h2{
+    position: absolute;
+    font-size: 25px;
+    color: #040b2b;
+    left: 50px;
+}
+.row-account-info {
+    position: absolute;
+    left: 300px;
+    top: 120px;
+}
+
+.form-horizontal{
+    line-height: 20px;
+}
+
