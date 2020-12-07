@@ -6,6 +6,6 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="">Hype<span>!</span>Club</a>
+                <a href="shoes_shop.php">Hype<span>!</span>Club</a>
             </div>
             

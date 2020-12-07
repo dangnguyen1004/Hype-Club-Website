@@ -118,7 +118,7 @@ header .nav ul li a:hover::before {
     width: 100%;
 }
 header .bag img{
-    width: 32px;
+    width: 28px;
 }
 
 header .bag img:hover{
@@ -127,7 +127,7 @@ header .bag img:hover{
 header .user img{
     margin-left: 10px;
     margin-right: 10px;
-    width: 32px;
+    width: 28px;
 }
 header .user img:hover{
     transform: translateY(2px);
