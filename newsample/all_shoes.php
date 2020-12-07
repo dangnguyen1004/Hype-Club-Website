@@ -3,6 +3,7 @@ include "header1.php";
 ?>
 <!--them vao <head>-->
 <link rel="stylesheet" href="../newsample/css/allProductStyle.css">
+    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
 <?php
 include "header2.php";
 ?>

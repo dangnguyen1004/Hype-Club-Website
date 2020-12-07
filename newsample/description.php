@@ -3,6 +3,7 @@
 ?>
     <!--them vao <head>-->
     <link rel="stylesheet" type="text/css" href="css/styledes.css">
+    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
 <?php
     include "header2.php";
 ?>

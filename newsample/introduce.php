@@ -3,6 +3,7 @@
 ?>
     <!--them vao <head> tag-->
     <link rel="stylesheet" type="text/css" href="css/introduce.css">
+    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
 <?php
     include "header2.php";
 ?>
