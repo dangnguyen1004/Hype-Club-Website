@@ -2,7 +2,7 @@
     include "header1.php";
 ?>
     <!--them vao <head>-->
-    <link rel="stylesheet" type="text/css" href="css/description.css">
+    <link rel="stylesheet" type="text/css" href="css/styledes.css">
 <?php
     include "header2.php";
 ?>

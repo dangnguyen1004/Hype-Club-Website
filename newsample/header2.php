@@ -1,3 +1,8 @@
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body>
