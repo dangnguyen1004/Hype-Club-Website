@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="login/login.css" />
     <title>Hype Club</title>
-    <link rel="icon" href="img/iconTitle.svg" type="image/svg">
+    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
 </head>
 
 <body>
