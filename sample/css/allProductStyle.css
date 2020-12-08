@@ -342,6 +342,7 @@ header .ham-burger.active span:nth-child(2) {
     color: black;
     padding: 10px;
     font-size: 25px;
+    font-weight: 500;
 }
 .price-package .container .top-bar .inner-bar {
     text-align: center;
