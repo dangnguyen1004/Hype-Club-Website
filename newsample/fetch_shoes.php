@@ -16,7 +16,7 @@
                 echo '
                 <div class="box" data-wow-delay="'.$delay.'s">
                     <input type="hidden" id="id_item" name="id_item" value="'.$row['id'].'">
-                    <a href="/sample/description.html" style="text-decoration: none;">
+                    <a href="../newsample/description.php?id='.$row['id'].'" style="text-decoration: none;">
                         <div class="inner">
                             <div class="img">';
                         $sql_image = "SELECT * FROM item_image WHERE item_id =". $row['id'];
@@ -30,10 +30,18 @@
                             <img src="fetch_shoes_image.php?id='.$image_record['id'].'" alt="price" class="img-top" />';
                         }
                         else{
+                            $rand_num = rand(10,50);
+                            if ($rand_num % 2 == 0){
+                                $rand_num += 1;
+                            }
+                            if ($rand_num == 47){
+                                $rand_num += 2;
+                            }
                             echo '
-                            <img src="fetch_shoes_image.php?id=15" alt="price" class="img-bot" />';
+                            <img src="fetch_shoes_image.php?id='.$rand_num.'" alt="price" class="img-bot" />';
+                            $rand_num += 1;
                             echo '
-                            <img src="fetch_shoes_image.php?id=16" alt="price" class="img-top" />';
+                            <img src="fetch_shoes_image.php?id='.$rand_num.'" alt="price" class="img-top" />';
                         }
                 echo '
                             </div>

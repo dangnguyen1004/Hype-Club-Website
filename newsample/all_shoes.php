@@ -21,13 +21,13 @@ include "header3.php";
     <div class="container">
 
         <div class="top-bar">
-            <div class="inner-bar"><a href="#">Top Product</a></div>
+            <div class="inner-bar"><a href="#" class="current">Top Product</a></div>
             <div class="inner-bar"><a href="#">Nike</a></div>
             <div class="inner-bar"><a href="#">Adidas</a></div>
             <div class="inner-bar"><a href="#">New Balance</a></div>
         </div>
 
-        <div class="content2">
+        <!-- <div class="content2">
             <div class="box wow bounceInUp" data-wow-delay="0.2s">
                 <h2>SPECIAL SELCTION </h2>
                 <p id="subtext">A series of nylon padded styles for extra comfort</p>
@@ -40,7 +40,7 @@ include "header3.php";
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="content" id="load_data"></div>
 
@@ -178,7 +178,7 @@ include "header3.php";
                 start = start + limit;
                 setTimeout(function() {
                     load_country_data(limit, start);
-                }, 1500);
+                }, 1000);
             }
         });
 
