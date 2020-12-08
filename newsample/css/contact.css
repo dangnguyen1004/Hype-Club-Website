@@ -17,6 +17,12 @@ body {
 
 /*Header*/
 
+h1 {
+    color: #c11325;
+    margin-left: 10px;
+    font-size: 100px;
+}
+
 header {
     position: fixed;
     left: 0px;
@@ -157,6 +163,7 @@ header .ham-burger.active span:nth-child(2) {
     margin: auto;
 }
 
+
 /*Contact Section*/
 
 .contact {
@@ -209,7 +216,7 @@ header .ham-burger.active span:nth-child(2) {
     padding: 0px 50px;
     border: 1px solid transparent;
     background-color: #c11325;
-    color: #000000;
+    color: white;
     font-size: 15px;
     transition: all .5s ease;
     cursor: pointer;
@@ -281,12 +288,12 @@ header .ham-burger.active span:nth-child(2) {
 }
 
 .contact .content .text .social a:hover {
-    background-color: transparent;
+    background-color: black;
     border-color: #000000;
 }
 
 .contact .content .text .social a span {
-    color: #000000;
+    color: white;
     font-size: 20px;
 }
 
@@ -297,14 +304,16 @@ header .ham-burger.active span:nth-child(2) {
     color: #333333;
     font-size: 15px;
 }
-.contact .map{
+
+.contact .map {
     text-align: center;
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
 }
-.contact .map iframe{
-    width:60px;
-    height:45px;
+
+.contact .map iframe {
+    width: 60px;
+    height: 45px;
 }
 
 
@@ -317,7 +326,7 @@ header .ham-burger.active span:nth-child(2) {
     .home {
         background-position: center;
     }
-    .introduce{
+    .introduce {
         margin-top: 10%;
     }
 }
@@ -329,7 +338,7 @@ header .ham-burger.active span:nth-child(2) {
     .home h1 {
         font-size: 40px;
     }
-    .introduce{
+    .introduce {
         margin-top: 18%;
     }
     .contact .content {
@@ -341,29 +350,32 @@ header .ham-burger.active span:nth-child(2) {
     }
 }
 
+
 /*if screen width is less than or equal to 550px then*/
 
 @media(max-width: 550px) {
     .home h1 {
         font-size: 30px;
     }
-    .introduce{
+    .introduce {
         margin-top: 18%;
     }
 }
+
 @media(max-width: 375px) {
     .home h1 {
         font-size: 30px;
     }
-    .introduce{
+    .introduce {
         margin-top: 20%;
     }
 }
+
 @media(max-width: 320px) {
     .home h1 {
         font-size: 30px;
     }
-    .introduce{
+    .introduce {
         margin-top: 23%;
     }
 }

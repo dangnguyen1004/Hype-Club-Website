@@ -16,6 +16,7 @@
     <!-- Start Contact -->
     <section class="contact" id="contact">
         <div class="container">
+        <h1>Get Connected with us</h1>
             <div class="content">
                 <div class="box form wow slideInLeft">
                     <form>
@@ -27,7 +28,6 @@
                     </form>
                 </div>
                 <div class="box text wow slideInRight">
-                    <h2>Get Connected with us</h2>
                     <div class="info">
                         <ul>
                             <li><span class="fa fa-map-marker"></span>KTX Khu A DHQG TP HCM, phuong Dong Hoa, thi xa Di An, tinh Binh Duong
