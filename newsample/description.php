@@ -19,11 +19,11 @@
         <div class="container">
             <div class="content">
                 <div class="box leftimg img1 wow slideInLeft">
-                    <div class="back"><button  onclick="switch_Image(-1)"><span><</span></button></div>
+                    <div class="back"><button  onclick="switch_Image(-1)"><span>&lsaquo;</span></button></div>
                     
-                    <div class="next"><button  onclick="switch_Image(1)"><span>></span></button></div>
+                    <div class="next"><button  onclick="switch_Image(1)"><span>&rsaquo;</span></button></div>
                     
-                    <img name="img_product" src="images/des_page/img5.jpg" alt="classes" />
+                    <img  src="images/des_page/img5.jpg" id="img_product"  alt="classes" />
                     
                 </div>
 
