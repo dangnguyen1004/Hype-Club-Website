@@ -193,6 +193,7 @@ header .ham-burger.active span:nth-child(2) {
 .price-package .content {
     -webkit-display: flex;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .price-package .content .box {
@@ -216,12 +217,12 @@ header .ham-burger.active span:nth-child(2) {
 }
 
 .price-package .content .box .inner .text {
-    padding: 10px 15px 30px 15px;
+    padding: 10px 0px 30px 0px;
     text-align: center;
 }
 
 .price-package .content .box .inner .text h3 {
-    font-size: 27px;
+    font-size: 17px;
     color: #222222;
     margin: 0;
     padding: 0px 0px 10px 0px;
@@ -329,26 +330,20 @@ header .ham-burger.active span:nth-child(2) {
     margin-bottom: 0px;
 }
 
-.price-package .top-bar{
+
+.price-package .container .top-bar {
     display: flex;
-    padding-right: 90px;
+    justify-content: center;
+    width: 100%;
+    margin: 25px 0px 25px 0px;
 }
 .price-package .top-bar .inner-bar a {
     text-decoration: none;
     color: black;
     padding: 10px;
-    font-size: large;
-}
-.price-package .container .top-bar {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 0px;
+    font-size: 25px;
 }
 .price-package .container .top-bar .inner-bar {
-    /* width: 25%; */
     text-align: center;
 }
 
