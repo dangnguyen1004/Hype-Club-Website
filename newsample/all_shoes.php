@@ -3,17 +3,12 @@ include "header1.php";
 ?>
 <!--them vao <head>-->
 <link rel="stylesheet" href="../newsample/css/allProductStyle.css">
-    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
+<link rel="icon" href="images/iconTitle.svg" type="image/svg">
 <?php
 include "header2.php";
 ?>
 <!--them vao thanh header-->
-<div class="top-bar">
-    <div class="inner-bar"><a href="#">Top Product</a></div>
-    <div class="inner-bar"><a href="#">Nike</a></div>
-    <div class="inner-bar"><a href="#">Adidas</a></div>
-    <div class="inner-bar"><a href="#">New Balance</a></div>
-</div>
+
 <?php
 include "header3.php";
 ?>
@@ -21,7 +16,12 @@ include "header3.php";
 <!-- Start Price -->
 <section class="price-package" id="price">
     <div class="container">
-        <h2 class="topProductTitle">Top Products</h2>
+        <div class="top-bar">
+            <div class="inner-bar"><a href="#">Top Product</a></div>
+            <div class="inner-bar"><a href="#">Nike</a></div>
+            <div class="inner-bar"><a href="#">Adidas</a></div>
+            <div class="inner-bar"><a href="#">New Balance</a></div>
+        </div>
         <div class="content">
             <div class="box wow bounceInUp" data-wow-delay="0s">
                 <a href="../newsample/description.php" style="text-decoration: none;">
