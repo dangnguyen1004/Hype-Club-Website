@@ -91,6 +91,7 @@ form.sign-in-form {
 }
 
 .input-field input {
+    max-width: 90%;
     background: none;
     outline: none;
     border: none;
@@ -101,6 +102,7 @@ form.sign-in-form {
 }
 
 .input-field input::placeholder {
+    background: none;
     color: #aaa;
     font-weight: 500;
 }
