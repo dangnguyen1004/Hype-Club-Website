@@ -287,9 +287,7 @@ header .ham-burger.active span:nth-child(2) {
     max-width: 50%;
 }
 
-.price-package .content2 .box {
-    
-}
+
 
 .price-package .content2 .box h2{
     font-size: 60px;
@@ -342,6 +340,7 @@ header .ham-burger.active span:nth-child(2) {
     color: black;
     padding: 10px;
     font-size: 25px;
+    font-weight: 500;
 }
 .price-package .container .top-bar .inner-bar {
     text-align: center;
@@ -504,7 +503,7 @@ header .ham-burger.active span:nth-child(2) {
 @media(max-width: 767px) {
 
     .header .container{
-        display: block
+        display: block;
     }
 
     .price-package .container .topProductTitle{
@@ -520,6 +519,7 @@ header .ham-burger.active span:nth-child(2) {
     .price-package .content .box .text p {
         font-size: 60px;
     }
+
 
 
     .price-package .content2{
