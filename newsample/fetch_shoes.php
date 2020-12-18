@@ -1,12 +1,7 @@
 <?php
     if (isset($_POST['limit']) and isset($_POST['start'])){
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "shoesdatabase";
+        include "conn.php";
 
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
         $sql = "SELECT * FROM item ORDER BY id LIMIT ". $_POST['start']. ", ". $_POST['limit'];
         $result = mysqli_query($conn,$sql);
 
