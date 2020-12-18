@@ -55,6 +55,7 @@
               <input type="text" class="form-control" name="name" id="name" placeholder="Ví dụ: Nguyên Văn A">
 
           </form>
+          
           <form class="form-group" action="">
               <label> Email:</label>
               <input type="email" class="form-control" name="email" id="email" placeholder="Ví dụ: A@gmail.com">

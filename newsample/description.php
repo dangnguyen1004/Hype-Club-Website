@@ -19,8 +19,8 @@ include "header3.php";
     <div class="container">
         <div class="content">
             <div class="box leftimg img1 wow slideInLeft">
-                <div class="back"><button onclick="switch_Image(-1)"><span>
-                            <</span> </button> </div> <div class="next"><button onclick="switch_Image(1)"><span>></span></button></div>
+                <div class="back"><button onclick="switch_Image(-1)"><span>&lsaquo;</span> </button> </div> 
+                <div class="next"><button onclick="switch_Image(1)"><span>&rsaquo;</span></button></div>
                 <?php
                 include "conn.php";
                 if (isset($_GET['id'])){
@@ -30,12 +30,12 @@ include "header3.php";
                     if (mysqli_num_rows($tempData) > 0){
                         $record = mysqli_fetch_assoc($tempData);
                         echo '
-                        <img name="img_product" src="fetch_shoes_image.php?id='.$record['id'].'" alt="classes" />
+                        <img id="img_product" src="fetch_shoes_image.php?id='.$record['id'].'" alt="classes" />
                         ';
                     }
                     else{
                         echo '
-                        <img name="img_product" src="images/des_page/img5.jpg" alt="classes" />
+                        <img id="img_product" src="images/des_page/img5.jpg" alt="classes" />
                         ';
                     }
                     
