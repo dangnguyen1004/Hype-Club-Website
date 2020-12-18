@@ -81,7 +81,7 @@
                 <div class="box wow bounceInUp">
                     <div class="inner">
                         <div class="price-tag">
-                            $89
+                            19.888.000 VND
                         </div>
                         <div class="img">
                             <img src="images/nike1.jpg" alt="price" />
@@ -94,14 +94,14 @@
                             <p>classic features leather and synthetic leather</p>
                             <p>construction for added durability and the</p>
                             <p>same vintage vibes.</p>
-                            <a href="../newsample/description.php" class="btn">Buy Now</a>
+                            <a href="../newsample/description.php?id=1" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="box wow bounceInUp" data-wow-delay="0.2s">
                     <div class="inner">
-                        <div class="price-tag">
-                            $99
+                        <div class="price-tag" >
+                            5.999.000 VND
                         </div>
                         <div class="img">
                             <img src="images/nike2.jpg" alt="price" />
@@ -113,14 +113,14 @@
                             <p>best. It has a modern design that is</p>
                             <p>convenient and comfortable, with a sleek</p>
                             <p>upper that gives a clean look.</p><br>
-                            <a href="../newsample/description.php" class="btn">Buy Now</a>
+                            <a href="../newsample/description.php?id=3" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="box wow bounceInUp" data-wow-delay="0.4s">
                     <div class="inner">
                         <div class="price-tag">
-                            $120
+                            5.999.000 VND
                         </div>
                         <div class="img">
                             <img src="images/nike3.jpg" alt="price" />
@@ -133,7 +133,7 @@
                             <p>like Thinsulate™ and workwear-inspired</p>
                             <p>Scotchlite™, the heavy-duty upper merges</p>
                             <p>everyday utility with style.</p>
-                            <a href="../newsample/description.php" class="btn">Buy Now</a>
+                            <a href="../newsample/description.php?id=4" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>

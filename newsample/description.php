@@ -101,7 +101,8 @@ include "header3.php";
 
                     <div class="select_size">
                         <div>
-                            <input id="btn__18113420" name="btn" type="submit" disabled="" class="btn" value="US 5">
+
+                            <input id="btn__18113420" name="btn" type="submit" class="btn" value="US 5">
 
                             <input id="btn__18113419" name="btn" type="submit" class="btn" value="US 5.5">
 
@@ -125,16 +126,17 @@ include "header3.php";
 
                             <input id="btn__18113413" name="btn" type="submit" class="btn" value="US 9.5">
 
-                            <input id="btn__18113422" name="btn" type="submit" disabled="" class="btn" value="US 10">
+                            <input id="btn__18113422" name="btn" type="submit" class="btn" value="US 10">
 
-                            <input id="btn__18113425" name="btn" type="submit" disabled="" class="btn" value="US 10.5">
+                            <input id="btn__18113425" name="btn" type="submit" class="btn" value="US 10.5">
 
                         </div>
                     </div>
 
                 </div>
                 <div class="buy">
-                    <button class="addbag btn">Add to Bag</button> <br>
+                    
+                    <button type="submit" class="addbag btn">Add to Bag</button> <br>
                     <button class="buynow btn">Buy Now</button>
                 </div>
                 <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes.</p>
@@ -153,8 +155,27 @@ include "header3.php";
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <p></p>
-                        <img src="images/des_page/img1.jpg" alt=""> <br>
-                        <span>Nike Classic Cortez <br> $129</span>
+                        <?php                         
+
+                        $sql = "SELECT * FROM item_image WHERE item_id = ".$_GET['id'];
+                        $listImagesFromGivenId = mysqli_query($conn,$sql);
+                        
+                        $sql = "SELECT * FROM item WHERE id =".$_GET['id'];
+                        $listItemOfGivenId = mysqli_query($conn,$sql);
+
+                        if (mysqli_num_rows($listImagesFromGivenId) > 0){
+                            $recordImage = mysqli_fetch_assoc($listImagesFromGivenId);
+                            $recordItem = mysqli_fetch_assoc($listItemOfGivenId);
+                            echo '<img src="fetch_shoes_image.php?id='.$recordImage['id'].'" alt=""> <br>';
+                            echo '<span style="margin: 10px 0px 10px 0px;">'.$recordItem['name'].' <br> '.number_format($recordItem['price']).'</span>';
+                        }
+                        else{
+                            echo '<img src="images/des_page/img1.jpg" alt=""> <br>';
+                            echo '<span>Nike Classic Cortez <br> $129</span>';
+                        } 
+
+                        ?>
+                        
 
                         <p>CLASSIC COMFORT. VINTAGE LOOK.</p>
                         <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes</p>
