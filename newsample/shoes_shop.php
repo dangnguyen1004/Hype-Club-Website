@@ -1,16 +1,53 @@
-<?php
-    include "header1.php";
-?>
-    <!--them vao <head> tag-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hype Club</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/header_icon.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="images/iconTitle.svg" type="image/svg">
-<?php
-    include "header2.php";
-?>
-    <!--them vao thanh header-->
-<?php
-    include "header3.php";
-?>
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="shoes_shop.php">Hype<span>!</span>Club</a>
+            </div>
+            
+            <div>
+            <a href="" class="bag"><img src="../newsample/images/icon/bag.png" alt=""></a>
+            <a href="login.php" class="user"><img src="../newsample/images/icon/user.png" alt=""></a>
+            <a href="javascript:void(0)" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="../newsample/shoes_shop.php">Home</a></li>
+                    <li><a href="../newsample/introduce.php">Introduction</a></li>
+                    <li><a href="../newsample/all_shoes.php">All shoes</a></li>
+                    <li><a href="../newsample/all_shoes.php">Accessories</a></li>
+                    <li><a href="../newsample/all_shoes.php">Promotions</a></li>
+                    <li><a href="../newsample/all_shoes.php">Stores</a></li>
+                    <li><a href="../newsample/login.php">Account</a></li>
+                    <li><a href="../newsample/contact.php">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
 
     <!-- Start Home -->
     <section class="home wow flash" id="home">
