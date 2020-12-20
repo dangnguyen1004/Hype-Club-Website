@@ -132,7 +132,7 @@
                 if (data == 'fail') {
                     $('#loginResponse').html('Invalid login or password. Please try again.');
                 } else {
-                    window.location.replace("../newsample/shoes_shop.php")
+                    window.location.replace("../newsample/account/index.html")
                 }
             }
         });
@@ -212,8 +212,7 @@
                         'password': password
                     },
                     success: function(response) {
-                        
-
+                        alert("sign up oke");
                     }
                 });
             }
@@ -238,7 +237,7 @@
 
     var username = getCookie("username");
     if (username != '') {
-        // window.location.replace("../newsample/shoes_shop.php")
+        window.location.replace("../newsample/account/")
     }
 </script>
 
