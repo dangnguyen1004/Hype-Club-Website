@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+.table>tbody>tr>td, .table>tfoot>tr>td {
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+
+#cart{
+    width: 100%;
+    display: inline !important;
+}
+table#cart tbody td .form-control {
+width:20%;
+display: inline !important;
+}
+.actions .btn {
+width:36%;
+margin:1.5em 0;
+}
+
+.actions .btn-danger {
+float:center;
+}
+table#cart thead {
+display: none;
+}
+table#cart tbody td {
+display: block;
+padding: .6rem;
+min-width:320px;
+}
+table#cart tbody tr td:first-child {
+background: #333;
+color: #fff;
+}
+table#cart tbody td:before {
+content: attr(data-th);
+font-weight: bold;
+display: inline-block;
+width: 8rem;
+}
+
+table#cart tfoot td {
+display:block;
+}
+table#cart tfoot td .btn {
+display:block;
+}
+}
