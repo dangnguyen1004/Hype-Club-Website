@@ -1,3 +1,6 @@
 <?php
-setcookie("username", "", time() - 3600);
+setcookie("username", "", 0,"/");
 header("location: ../shoes_shop.php");
+
+?>
+

@@ -14,7 +14,7 @@ if (isset($_POST['checkLogin'])){
         $accountInfo = mysqli_fetch_assoc($findUserName);
         if ($password == $accountInfo['password']){
             $message = 'success';
-            setcookie("username", $userName, time() + 3600); 
+            setcookie("username", $userName, time() + 3600, "/"); 
         }
         else{ # wrong password
             $message = 'fail';

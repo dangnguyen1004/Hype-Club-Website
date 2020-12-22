@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-        <link rel="stylesheet" href="bag.css">
+        <link rel="stylesheet" href="css/bag.css">
         <title>Hype Club</title>
         <link rel="icon" href="images/iconTitle.svg" type="image/svg">
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
