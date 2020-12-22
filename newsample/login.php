@@ -162,7 +162,7 @@
                         $('#checkUsernameResponse').html('Already register');
                     } else if (response == 'success') {
                         username_state = true;
-                        $('#checkUsernameResponse').html('');
+                        $('#checkUsernameResponse').html("");
                     }
                 }
             });

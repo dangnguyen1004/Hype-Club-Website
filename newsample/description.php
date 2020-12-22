@@ -19,29 +19,27 @@ include "header3.php";
     <div class="container">
         <div class="content">
             <div class="box leftimg img1 wow slideInLeft">
-                <div class="back"><button onclick="switch_Image(-1)"><span>&lsaquo;</span> </button> </div> 
+                <div class="back"><button onclick="switch_Image(-1)"><span>&lsaquo;</span> </button> </div>
                 <div class="next"><button onclick="switch_Image(1)"><span>&rsaquo;</span></button></div>
                 <?php
                 include "conn.php";
-                if (isset($_GET['id'])){
-                    $sql = "SELECT * FROM item_image WHERE item_id = ".$_GET['id'];
-                    $listImagesFromGivenId = mysqli_query($conn,$sql);
+                if (isset($_GET['id'])) {
+                    $sql = "SELECT * FROM item_image WHERE item_id = " . $_GET['id'];
+                    $listImagesFromGivenId = mysqli_query($conn, $sql);
                     $tempData = $listImagesFromGivenId;
-                    if (mysqli_num_rows($tempData) > 0){
+                    if (mysqli_num_rows($tempData) > 0) {
                         $record = mysqli_fetch_assoc($tempData);
                         echo '
-                        <img id="img_product" src="fetch_shoes_image.php?id='.$record['id'].'" alt="classes" />
+                        <img id="img_product" src="fetch_shoes_image.php?id=' . $record['id'] . '" alt="classes" />
                         ';
-                    }
-                    else{
+                    } else {
                         echo '
                         <img id="img_product" src="images/des_page/img5.jpg" alt="classes" />
                         ';
                     }
-                    
                 }
 
-                
+
                 ?>
 
             </div>
@@ -61,33 +59,31 @@ include "header3.php";
                     </span>
                 </div>
                 <?php
-                    // Find item
-                    if (isset($_GET['id'])){
+                // Find item
+                if (isset($_GET['id'])) {
 
-                        $sql = "SELECT * FROM item WHERE id =".$_GET['id'];
-                        $listItemOfGivenId = mysqli_query($conn,$sql);
-                        $tempData = $listItemOfGivenId;                
-                        if (mysqli_num_rows($tempData) > 0){
-                            while ($record = mysqli_fetch_assoc($tempData)){
-                                echo '
-                                <h2>'.$record['name'].'</h2>
-                                <p> <span style="text-decoration: line-through;">'.number_format($record['origin_price']).' VND</span> <span style="color: red;">'. number_format($record['price']).'VND</span> </p>
-                                ';
-                            }
-                        }
-                        else{
+                    $sql = "SELECT * FROM item WHERE id =" . $_GET['id'];
+                    $listItemOfGivenId = mysqli_query($conn, $sql);
+                    $tempData = $listItemOfGivenId;
+                    if (mysqli_num_rows($tempData) > 0) {
+                        while ($record = mysqli_fetch_assoc($tempData)) {
                             echo '
+                                <h2>' . $record['name'] . '</h2>
+                                <p> <span style="text-decoration: line-through;">' . number_format($record['origin_price']) . ' VND</span> <span style="color: red;">' . number_format($record['price']) . 'VND</span> </p>
+                                ';
+                        }
+                    } else {
+                        echo '
                             <h2>Nike Classic Cortez</h2>
                             <p>$129</p>
                             ';
-                        }
                     }
-                    else{
-                        echo '
+                } else {
+                    echo '
                         <h2>Nike Classic Cortez</h2>
                         <p>$129</p>
                         ';
-                    }
+                }
                 ?>
 
 
@@ -102,42 +98,42 @@ include "header3.php";
                     <div class="select_size">
                         <div>
 
-                            <input id="btn__18113420" name="btn" type="submit" class="btn" value="US 5">
+                            <input id="btn__18113420" name="btn" type="button" class="btn" value="US 5" onclick="choseSize(5);">
 
-                            <input id="btn__18113419" name="btn" type="submit" class="btn" value="US 5.5">
+                            <input id="btn__18113419" name="btn" type="button" class="btn" value="US 5.5" onclick="choseSize(5.5);">
 
-                            <input id="btn__18113418" name="btn" type="submit" class="btn" value="US 6">
+                            <input id="btn__18113418" name="btn" type="button" class="btn" value="US 6" onclick="choseSize(6);">
 
-                            <input id="btn__18113417" name="btn" type="submit" class="btn" value="US 6.5">
-
-                        </div>
-                        <div>
-                            <input id="btn__18113416" name="btn" type="submit" class="btn" value="US 7">
-
-                            <input id="btn__18113415" name="btn" type="submit" class="btn" value="US 7.5">
-
-                            <input id="btn__18113426" name="btn" type="submit" class="btn" value="US 8">
-
-                            <input id="btn__18113423" name="btn" type="submit" class="btn" value="US 8.5">
+                            <input id="btn__18113417" name="btn" type="button" class="btn" value="US 6.5" onclick="choseSize(6.5);">
 
                         </div>
                         <div>
-                            <input id="btn__18113414" name="btn" type="submit" class="btn" value="US 9">
+                            <input id="btn__18113416" name="btn" type="button" class="btn" value="US 7" onclick="choseSize(7);">
 
-                            <input id="btn__18113413" name="btn" type="submit" class="btn" value="US 9.5">
+                            <input id="btn__18113415" name="btn" type="button" class="btn" value="US 7.5" onclick="choseSize(7.5);">
 
-                            <input id="btn__18113422" name="btn" type="submit" class="btn" value="US 10">
+                            <input id="btn__18113426" name="btn" type="button" class="btn" value="US 8" onclick="choseSize(8);">
 
-                            <input id="btn__18113425" name="btn" type="submit" class="btn" value="US 10.5">
+                            <input id="btn__18113423" name="btn" type="button" class="btn" value="US 8.5" onclick="choseSize(8.5);">
+
+                        </div>
+                        <div>
+                            <input id="btn__18113414" name="btn" type="button" class="btn" value="US 9" onclick="choseSize(9);">
+
+                            <input id="btn__18113413" name="btn" type="button" class="btn" value="US 9.5" onclick="choseSize(9.5);">
+
+                            <input id="btn__18113422" name="btn" type="button" class="btn" value="US 10" onclick="choseSize(10);">
+
+                            <input id="btn__18113425" name="btn" type="button" class="btn" value="US 10.5" onclick="choseSize(10.5);">
 
                         </div>
                     </div>
 
                 </div>
                 <div class="buy">
-                    
-                    <button type="submit" class="addbag btn">Add to Bag</button> <br>
-                    <button class="buynow btn">Buy Now</button>
+
+                    <button type="submit" class="addbag btn" onclick="addShoesToBag();">Add to Bag</button> <br>
+                    <button class="buynow btn" onclick="buyNow();">Buy Now</button>
                 </div>
                 <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes.</p>
                 <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes</p>
@@ -155,27 +151,26 @@ include "header3.php";
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <p></p>
-                        <?php                         
+                        <?php
 
-                        $sql = "SELECT * FROM item_image WHERE item_id = ".$_GET['id'];
-                        $listImagesFromGivenId = mysqli_query($conn,$sql);
-                        
-                        $sql = "SELECT * FROM item WHERE id =".$_GET['id'];
-                        $listItemOfGivenId = mysqli_query($conn,$sql);
+                        $sql = "SELECT * FROM item_image WHERE item_id = " . $_GET['id'];
+                        $listImagesFromGivenId = mysqli_query($conn, $sql);
 
-                        if (mysqli_num_rows($listImagesFromGivenId) > 0){
+                        $sql = "SELECT * FROM item WHERE id =" . $_GET['id'];
+                        $listItemOfGivenId = mysqli_query($conn, $sql);
+
+                        if (mysqli_num_rows($listImagesFromGivenId) > 0) {
                             $recordImage = mysqli_fetch_assoc($listImagesFromGivenId);
                             $recordItem = mysqli_fetch_assoc($listItemOfGivenId);
-                            echo '<img src="fetch_shoes_image.php?id='.$recordImage['id'].'" alt=""> <br>';
-                            echo '<span style="margin: 10px 0px 10px 0px;">'.$recordItem['name'].' <br> '.number_format($recordItem['price']).'</span>';
-                        }
-                        else{
+                            echo '<img src="fetch_shoes_image.php?id=' . $recordImage['id'] . '" alt=""> <br>';
+                            echo '<span style="margin: 10px 0px 10px 0px;">' . $recordItem['name'] . ' <br> ' . number_format($recordItem['price']) . '</span>';
+                        } else {
                             echo '<img src="images/des_page/img1.jpg" alt=""> <br>';
                             echo '<span>Nike Classic Cortez <br> $129</span>';
-                        } 
+                        }
 
                         ?>
-                        
+
 
                         <p>CLASSIC COMFORT. VINTAGE LOOK.</p>
                         <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes</p>
@@ -356,12 +351,12 @@ include "header3.php";
         if (current < 0) current = 1;
         if (current > 1) current = 0;
         <?php
-        $sql = "SELECT * FROM item_image WHERE item_id = ".$_GET['id'];
-        $listImagesFromGivenId = mysqli_query($conn,$sql);
+        $sql = "SELECT * FROM item_image WHERE item_id = " . $_GET['id'];
+        $listImagesFromGivenId = mysqli_query($conn, $sql);
         $tempData = $listImagesFromGivenId;
-        echo 'Image1 = '.mysqli_fetch_assoc($tempData)['id'].';';
+        echo 'Image1 = ' . mysqli_fetch_assoc($tempData)['id'] . ';';
         ?>
-        idImageCurrent = current + Image1; 
+        idImageCurrent = current + Image1;
         document.images['img_product'].src = 'fetch_shoes_image.php?id=' + idImageCurrent;
     }
 
@@ -390,6 +385,41 @@ include "header3.php";
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+    }
+
+
+
+
+    // ######################## For chose size and add to bag ################################
+    var sizeOfShoes = 0.0;
+
+    function choseSize(size) {
+        sizeOfShoes = size;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function addShoesToBag() {
+        var usernameCookie = getCookie('username');
+        if (usernameCookie == '') { // not login 
+            
+        }
+        else{ // login
+
         }
     }
 </script>
