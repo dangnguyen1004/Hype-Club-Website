@@ -103,10 +103,10 @@
                             9.Hệ thống cửa hàng
                         </h4>
                         <p>
-                            Cơ sở chính: KTX Khu A DHQG TP HCM, Đông Hòa, Dĩ An, Bình Dương
+                            Cơ sở 1: KTX Khu A DHQG TP HCM, Đông Hòa, Dĩ An, Bình Dương
                         </p>
                         <p>
-                            Cơ sở phụ: KTX Khu B DHQG TP HCM, Đông Hòa, Dĩ An, Bình Dương
+                            Cơ sở 2: KTX Khu B DHQG TP HCM, Đông Hòa, Dĩ An, Bình Dương
                         </p>
                     </div>
                 </div>
