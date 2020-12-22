@@ -21,10 +21,10 @@ include "header3.php";
     <div class="container">
 
         <div class="top-bar">
-            <div class="inner-bar"><a href="#" class="current">Top Product</a></div>
-            <div class="inner-bar"><a href="#">Nike</a></div>
-            <div class="inner-bar"><a href="#">Adidas</a></div>
-            <div class="inner-bar"><a href="#">New Balance</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct current" onclick="changeToNav(1); fectchShoesData();">Top Product</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(2); fetchShoesData();">Nike</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(3); fetchShoesData();">Adidas</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(4); fetchShoesData();">New Balance</a></div>
         </div>
 
         <!-- <div class="content2">
@@ -139,8 +139,8 @@ include "header3.php";
     wow.init();
 </script>
 <script>
-    $(document).ready(function() {
-
+    // ####################### For fetch shoesssssssssssss ############################
+    function fetchShoesData() {
         var limit = 20;
         var start = 0;
         var action = 'inactive';
@@ -181,8 +181,17 @@ include "header3.php";
                 }, 1000);
             }
         });
+    }
+    $(document).ready(fetchShoesData());
 
-    });
+
+    // ################## For change navigation ##############################
+    function changeToNav(number) {
+        for (var i = 0; i < 4; i++) {
+            document.getElementsByClassName('navOfProduct')[i].classList.remove('current');
+        }
+        document.getElementsByClassName('navOfProduct')[number - 1].classList.add('current');
+    }
 </script>
 
 
