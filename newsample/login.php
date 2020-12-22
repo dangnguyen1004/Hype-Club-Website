@@ -167,7 +167,7 @@
                 }
             });
         });
-        // ############ Check password ##############
+        // ############ Check email ##############
         $('#email-signup').on('blur', function() {
             var email = $('#email-signup').val();
             if (email == '') {
