@@ -12,15 +12,18 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div>
+            <h1 style="justify-content: center; display: flex; font-size:50px;">Hype Club</h1>
+        </div>
         <div class="container">
-            <h2>Túi giày của bạn</h2>
+            <h2>Your shopping bag</h2>
             <table id="cart" class="table table-hover table-condensed">
                 <thead>
                 <tr>
-                    <th style="width:50%">Tên sản phẩm</th>
-                    <th style="width:10%">Giá</th>
-                    <th style="width:8%">Số lượng</th>
-                    <th style="width:22%" class="text-center">Thành tiền</th>
+                    <th style="width:50%">Item</th>
+                    <th style="width:10%">Price</th>
+                    <th style="width:8%">QTY</th>
+                    <th style="width:22%" class="text-center">Price</th>
                     <th style="width:10%"></th>
                 </tr>
                 </thead>
