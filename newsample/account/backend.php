@@ -17,3 +17,24 @@ if (isset($_POST['getInfo'])){
     }
 
 }
+
+if (isset($_POST['updateInfo'])){
+    $username = $_POST['username'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $ssn = $_POST['ssn'];
+    $gender = $_POST['gender'];
+    $birth = $_POST['birth'];
+
+
+    $updateInfoQuery = "UPDATE account SET name='$name', email='$email', phone='$phone', ssn='$ssn', gender='$gender', birth='$birth' WHERE username='$username'";
+    $resultUpdateInfo = mysqli_query($conn, $updateInfoQuery);
+
+    if ($resultUpdateInfo){
+        echo 'success';
+    }
+    else{
+        echo 'fail';
+    }
+}
