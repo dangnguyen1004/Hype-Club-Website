@@ -1,16 +1,53 @@
-<?php
-    include "header1.php";
-?>
-    <!--them vao <head> tag-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hype Club</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/header_icon.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="images/iconTitle.svg" type="image/svg">
-<?php
-    include "header2.php";
-?>
-    <!--them vao thanh header-->
-<?php
-    include "header3.php";
-?>
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="shoes_shop.php">Hype<span>!</span>Club</a>
+            </div>
+
+            <div>
+                <a href="" class="bag"><img src="../newsample/images/icon/bag.png" alt=""></a>
+                <a href="account/index.html" class="user"><img src="../newsample/images/icon/user.png" alt=""></a>
+                <a href="javascript:void(0)" class="ham-burger">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="../newsample/shoes_shop.php">Home</a></li>
+                    <li><a href="../newsample/introduce.php">Introduction</a></li>
+                    <li><a href="../newsample/all_shoes.php">All shoes</a></li>
+                    <li><a href="../newsample/all_shoes.php">Accessories</a></li>
+                    <li><a href="../newsample/all_shoes.php">Promotions</a></li>
+                    <li><a href="../newsample/all_shoes.php">Stores</a></li>
+                    <li><a href="../newsample/login.php">Account</a></li>
+                    <li><a href="../newsample/contact.php">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
 
     <!-- Start Home -->
     <section class="home wow flash" id="home">
@@ -81,7 +118,7 @@
                 <div class="box wow bounceInUp">
                     <div class="inner">
                         <div class="price-tag">
-                            $89
+                            19.888.000 VND
                         </div>
                         <div class="img">
                             <img src="images/nike1.jpg" alt="price" />
@@ -94,14 +131,14 @@
                             <p>classic features leather and synthetic leather</p>
                             <p>construction for added durability and the</p>
                             <p>same vintage vibes.</p>
-                            <a href="../newsample/description.php" class="btn">Buy Now</a>
+                            <a href="../newsample/description.php?id=1" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="box wow bounceInUp" data-wow-delay="0.2s">
                     <div class="inner">
                         <div class="price-tag">
-                            $99
+                            5.999.000 VND
                         </div>
                         <div class="img">
                             <img src="images/nike2.jpg" alt="price" />
@@ -113,14 +150,14 @@
                             <p>best. It has a modern design that is</p>
                             <p>convenient and comfortable, with a sleek</p>
                             <p>upper that gives a clean look.</p><br>
-                            <a href="../newsample/description.php" class="btn">Buy Now</a>
+                            <a href="../newsample/description.php?id=3" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="box wow bounceInUp" data-wow-delay="0.4s">
                     <div class="inner">
                         <div class="price-tag">
-                            $120
+                            5.999.000 VND
                         </div>
                         <div class="img">
                             <img src="images/nike3.jpg" alt="price" />
@@ -133,7 +170,7 @@
                             <p>like Thinsulate™ and workwear-inspired</p>
                             <p>Scotchlite™, the heavy-duty upper merges</p>
                             <p>everyday utility with style.</p>
-                            <a href="../newsample/description.php" class="btn">Buy Now</a>
+                            <a href="../newsample/description.php?id=4" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -220,6 +257,93 @@
     </section>
     <!-- End Gallery -->
 
-<?php
-    include "footer.php";
-?>
+
+    <!-- Start Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="content">
+                <div class="box form wow slideInLeft">
+                    <form>
+                        <input type="text" placeholder="Enter Name">
+                        <input type="text" placeholder="Enter Email">
+                        <input type="text" placeholder="Enter Mobile">
+                        <textarea placeholder="Enter Message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="box text wow slideInRight">
+                    <h2>Get Connected with us</h2>
+                    <p class="title-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <div class="info">
+                        <ul>
+                            <li><span class="fa fa-map-marker"></span>KTX Khu A DHQG TP HCM, phuong Dong Hoa, thi xa Di An, tinh Binh Duong</li>
+                            <li><span class="fa fa-phone"></span> 91 9999999999</li>
+                            <li><span class="fa fa-envelope"></span> hypeinfo@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <a href=""><span class="fa fa-facebook"></span></a>
+                        <a href=""><span class="fa fa-linkedin"></span></a>
+                        <a href=""><span class="fa fa-skype"></span></a>
+                        <a href=""><span class="fa fa-youtube-play"></span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".ham-burger, .nav ul li a").click(function() {
+
+                $(".nav").toggleClass("open")
+
+                $(".ham-burger").toggleClass("active");
+            })
+            $(".accordian-container").click(function() {
+                $(".accordian-container").children(".body").slideUp();
+                $(".accordian-container").removeClass("active")
+                $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+                $(this).children(".body").slideDown();
+                $(this).addClass("active")
+                $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+            })
+
+            $(".nav ul li a, .go-down").click(function(event) {
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+
+                    // add active class in navigation
+                    $(".nav ul li a").removeClass("active")
+                    $(this).addClass("active")
+                }
+            })
+        })
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 0,
+        });
+        wow.init();
+    </script>
+</body>
+
+</html>

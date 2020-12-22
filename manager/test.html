@@ -3,12 +3,153 @@
         <script src="test.js"></script>
     </head>
     <body>
-        <h1 class="Admin">Admin</h1>
-        <h1 onclick="showacc()" class="account"> 
-            <a  href="#"> <i class="fas fa-user-circle"></i></a>
-         </h1>
-        <button onclick="Click()">Click me!</button>
-        <p id="CClick" style="display: none;">Hien ra</p>
+        
+        <div class="container">
+            <!-- Button to Open the Modal -->
+            <h2></h2>
+            
+            <div class="d-fex justify-content-end" style="text-align: right;">
+                
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            <i class="fas fa-plus-circle"></i> Thêm thành viên
+            </button>
+            </div>
+            <div>
+            <h4>Danh sách nhân viên:</h4>
+            <div id="records-contant"></div>
+            
+            </div>
+            
+            
+          
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Thêm thành viên</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body" >
+          
+                    <form class="form-group" action="">
+                        <label> Tên nhân viên:</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Ví dụ: Nguyên Văn A">
+          
+                    </form>
+                    
+                    <form class="form-group" action="">
+                        <label> Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Ví dụ: A@gmail.com">
+          
+                    </form>
+                    <form class="form-group" action="">
+                        <label> Mật khẩu:</label>
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Ví dụ: abc456">
+                    </form>
+                    <form class="form-group" action="">
+                        <label>Nhập lại mật khẩu:</label>
+                        <input type="password" class="form-control" name="confpass" id="confpass" placeholder="Ví dụ: abc456">
+          
+                    </form>
+                    <form class="form-group" action="">
+                        <label> Số điện thoại:</label>
+                        <input type="text" class="form-control" name="ph" id="ph" placeholder="Ví dụ: 0998645">
+          
+                    </form>
+                    <form class="form-group" action="">
+                      <label> Vị trí:</label>
+                      <select class="form-control" id="ob">
+                      <option value="1">Admin</option>
+                      <option value="2">Quản lí</option>
+                      <option value="3">Nhân viên</option>
+                      
+                      </select>
+          
+                    </form>
+                    <form class="form-group" action="">
+                    <label> Cửa hàng làm việc:</label>
+                      <select class="form-control" id="idstore">
+                      
+                      </select>
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-success" data-dismiss="modal" onclick="addRecord()">Lưu</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          
+          
+          
+            <!--Update -->
+            <div class="modal" id="up-myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Thay đổi thông tin thành viên</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body" >
+                  <form class="form-group" action="">
+                        <label> Tên nhân viên:</label>
+                        <input type="text" class="form-control" name="up-name" id="up-name" placeholder="Ví dụ: Nguyên Văn A">
+          
+                    </form>
+                    <form class="form-group" action="">
+                        <label> Email:</label>
+                        <input type="email" class="form-control" name="up-email" id="up-email" placeholder="Ví dụ: A@gmail.com">
+          
+                    </form>
+                    <form class="form-group" action="">
+                        <label> Mật khẩu:</label>
+                        <input type="password" class="form-control" name="up-pass" id="up-pass" placeholder="Ví dụ: abc456">
+                    </form>
+                    <form class="form-group" action="">
+                        <label> Số điện thoại:</label>
+                        <input type="text" class="form-control" name="up-ph" id="up-ph" placeholder="Ví dụ: 0998645">
+          
+                    </form>
+                    <form class="form-group" action="">
+                      <label> Vị trí:</label>
+                      <select class="form-control" id="up-ob">
+                      <option value="1">Admin</option>
+                      <option value="2">Quản lí</option>
+                      <option value="3">Nhân viên</option>
+                      </select>
+          
+                    </form>
+                    <form class="form-group" action="">
+                    <label> Cửa hàng làm việc:</label>
+                      <select class="form-control" id="up-idstore">
+                      
+                      </select>
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-success" data-dismiss="modal" onclick="updateuserdatail()">Cập nhật</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                      <input type="hidden" name="" id="iduser">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          
+            </div>
         
     </body>
 </html>

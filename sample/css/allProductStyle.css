@@ -345,10 +345,6 @@ header .ham-burger.active span:nth-child(2) {
 .price-package .container .top-bar .inner-bar {
     text-align: center;
 }
-.price-package .container .top-bar .inner-bar .current{
-    border-bottom: 1px solid black;
-    opacity: 0.8;
-}
 
 /*Contact Section*/
 
@@ -507,7 +503,7 @@ header .ham-burger.active span:nth-child(2) {
 @media(max-width: 767px) {
 
     .header .container{
-        display: block
+        display: block;
     }
 
     .price-package .container .topProductTitle{
@@ -523,14 +519,7 @@ header .ham-burger.active span:nth-child(2) {
     .price-package .content .box .text p {
         font-size: 60px;
     }
-    .price-package .container .top-bar {
-        margin: 15px 0 15px 0;
-        display: flex;
-        justify-content: space-around;
-    }
-    .price-package .container .top-bar .inner-bar a{
-        font-size: 15px;
-    }
+
 
 
     .price-package .content2{
@@ -546,7 +535,6 @@ header .ham-burger.active span:nth-child(2) {
     }
     .price-package .content2 .box h2{
         font-size: 40px;
-        padding: 0;
     }
     #subtext{
         margin-bottom: 10px;

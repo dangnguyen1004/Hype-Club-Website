@@ -4,6 +4,9 @@ include "header1.php";
 <!--them vao <head>-->
 <link rel="stylesheet" href="../newsample/css/allProductStyle.css">
 <link rel="icon" href="images/iconTitle.svg" type="image/svg">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <?php
 include "header2.php";
 ?>
@@ -16,86 +19,17 @@ include "header3.php";
 <!-- Start Price -->
 <section class="price-package" id="price">
     <div class="container">
+
         <div class="top-bar">
-            <div class="inner-bar"><a href="#">Top Product</a></div>
+            <div class="inner-bar"><a href="#" class="current">Top Product</a></div>
             <div class="inner-bar"><a href="#">Nike</a></div>
             <div class="inner-bar"><a href="#">Adidas</a></div>
             <div class="inner-bar"><a href="#">New Balance</a></div>
         </div>
-        <div class="content">
-            <div class="box wow bounceInUp" data-wow-delay="0s">
-                <a href="../newsample/description.php" style="text-decoration: none;">
-                    <div class="inner">
 
-                        <div class="img">
-                            <img src="images/top_1.jpg" alt="price" class="img-bot" />
-                            <img src="images/top_1_2.jpg" alt="price" class="img-top" />
-                        </div>
-                        <div class="text">
-                            <h3>ULTRABOOST SUMMER</h3>
-                            <p>50% OFF / FULL SIZE </p>
-                            <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                    VND</span> </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <!-- <div class="content2">
             <div class="box wow bounceInUp" data-wow-delay="0.2s">
-                <a href="../newsample/description.php" style="text-decoration: none;">
-                    <div class="inner">
-
-                        <div class="img">
-                            <img src="images/top_4.jpg" alt="price" class="img-bot" />
-                            <img src="images/top_4_2.jpg" alt="price" class="img-top" />
-                        </div>
-                        <div class="text">
-                            <h3>MICKEY 4UTURE</h3>
-                            <p>50% OFF / FULL SIZE </p>
-                            <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                    VND</span> </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.4s">
-                <a href="../newsample/description.php" style="text-decoration: none;">
-                    <div class="inner">
-
-                        <div class="img">
-                            <img src="images/top_3.jpg" alt="price" class="img-bot" />
-                            <img src="images/top_3_2.jpg" alt="price" class="img-top" />
-                        </div>
-                        <div class="text">
-                            <h3>CYBERPUNK 2077</h3>
-                            <p>50% OFF / FULL SIZE </p>
-                            <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                    VND</span> </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.6s">
-                <a href="../newsample/description.php" style="text-decoration: none;">
-                    <div class="inner">
-
-                        <div class="img">
-                            <img src="images/top_2.jpg" alt="price" class="img-bot" />
-                            <img src="images/top_2_2.jpg" alt="price" class="img-top" />
-                        </div>
-                        <div class="text">
-                            <h3>4D RUN 1.0</h3>
-                            <p>50% OFF / FULL SIZE </p>
-                            <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                    VND</span> </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="content2">
-            <div class="box wow bounceInUp" data-wow-delay="1s">
-                <h2>QUILTED SELCTION </h2>
+                <h2>SPECIAL SELCTION </h2>
                 <p id="subtext">A series of nylon padded styles for extra comfort</p>
                 <img src="images/ctt_1.jpg" alt="ctt1" class="img-bot">
                 <img src="images/ctt_2.jpg" alt="ctt2" class="img-top">
@@ -106,134 +40,9 @@ include "header3.php";
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="content">
-            <div class="box wow bounceInUp" data-wow-delay="0s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_1.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_1_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>ULTRABOOST SUMMER</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.2s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_4.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_4_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>MICKEY 4UTURE</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.4s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_3.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_3_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>CYBERPUNK 2077</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.6s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_2.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_2_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>4D RUN 1.0</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="box wow bounceInUp" data-wow-delay="0s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_4.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_4_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>ULTRABOOST SUMMER</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.2s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_3.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_3_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>MICKEY 4UTURE</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.4s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_2.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_2_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>CYBERPUNK 2077</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-            <div class="box wow bounceInUp" data-wow-delay="0.6s">
-                <div class="inner">
-
-                    <div class="img">
-                        <img src="images/top_1.jpg" alt="price" class="img-bot" />
-                        <img src="images/top_1_2.jpg" alt="price" class="img-top" />
-                    </div>
-                    <div class="text">
-                        <h3>4D RUN 1.0</h3>
-                        <p>50% OFF / FULL SIZE </p>
-                        <p> <span class="strike-price">1.999.000 VND</span> <span class="off-price">999.000
-                                VND</span> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <div class="content" id="load_data"></div>
 
     </div>
 </section>
@@ -282,7 +91,7 @@ include "header3.php";
 
 
 <!-- Java scrip -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script>
     $(document).ready(function() {
 
@@ -329,6 +138,54 @@ include "header3.php";
     });
     wow.init();
 </script>
+<script>
+    $(document).ready(function() {
+
+        var limit = 20;
+        var start = 0;
+        var action = 'inactive';
+
+        function load_country_data(limit, start) {
+            $.ajax({
+                url: 'fetch_shoes.php',
+                method: 'POST',
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    $('#load_data').append(data);
+                    if (data == '') {
+                        // $('#load_data_message').html('<button type="button" class="btn btn-info">No data found</button>');
+                        action = 'active';
+                    } else {
+                        // $('#load_data_message').html('<button type="button" class="btn btn-warning">Please wait.....</button>');
+                        action = 'inactive';
+                    }
+                }
+            });
+        }
+
+        if (action == 'inactive') {
+            action = 'active';
+            load_country_data(limit, start);
+        }
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() > $('#load_data').height() && action == 'inactive') {
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_country_data(limit, start);
+                }, 1000);
+            }
+        });
+
+    });
+</script>
+
+
 <!-- End Javascript -->
 </body>
 

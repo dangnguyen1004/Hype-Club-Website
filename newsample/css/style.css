@@ -40,6 +40,7 @@ header .logo a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 700;
+    font-family: 'Oswald', sans-serif;
 }
 
 header .logo a span {
@@ -520,6 +521,7 @@ header .ham-burger.active span:nth-child(2) {
 }
 
 
+
 /*Start Today Section*/
 
 .start-today {
@@ -919,6 +921,7 @@ header .ham-burger.active span:nth-child(2) {
     color: #c5c5c5;
     font-size: 15px;
 }
+
 
 
 /*Responsive*/
