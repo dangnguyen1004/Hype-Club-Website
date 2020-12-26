@@ -190,6 +190,110 @@ header .ham-burger.active span:nth-child(2) {
     animation: goDown 1s ease infinite;
 }
 
+/*Modal Box*/
+
+.container #myBtn {
+    width: 100px;
+    margin: 70px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+}
+
+.container .btn {
+    padding: 4px 10px;
+    background-color: #c11325;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    outline: none;
+}
+
+.container .btn:hover {
+    border: 1px solid #222222;
+    color: #222222;
+    background-color: transparent;
+    outline: none;
+}
+
+.container .records-contant{
+    overflow-x:auto;
+}
+.container .table{
+    width: 100%;
+    
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+.container .table th,td{
+    padding: 5px 0 5px 5px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+.container .table .action{
+    width: 130px;
+}
+
+.container .table th{
+    background-color: #aaa;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+/* The Modal (background) */
+.modal {
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-bottom: 60px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal input{
+      padding-left: 10px;
+      width: 100%;
+      font-size: 20px;
+  }
+  .modal .modal-footer{
+      margin-top: 10px;
+      float: right;
+  }
+
 @-webkit-keyframes goDown {
     0% {
         transform: translateY(0);

@@ -1,0 +1,28 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: #fff6e1;
+}
+
+.center {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+   
+}
+.header{
+    height: 50px;
+    background-color: #db0007;
+}
+.header h2{
+    margin:0;
+    padding: 10px 10px;
+    color: #ffbc0d;
+    text-align: center;
+}
+
+.center{
+
+    background-color: #fff6e1;
+    
+}
