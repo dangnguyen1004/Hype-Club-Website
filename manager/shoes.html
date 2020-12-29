@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hype Club</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/header_icon.css">
+    <link rel="stylesheet" type="text/css" href="css/shoes.css">
+    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
+
+    <script src="https://kit.fontawesome.com/a00706d209.js" crossorigin="anonymous"></script>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="shoes_shop.php">Hype<span>!</span>Club</a>
+            </div>
+
+            <div>
+                
+                <a href="../newsample/account/index.html" class="user"><img src="../newsample/images/icon/user.png" alt=""></a>
+                <a href="javascript:void(0)" class="ham-burger">
+                    <span></span>
+                    <span></span>
+                </a>
+
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="homemanager.php">Home</a></li>
+                    <li><a href="shoes.html">All shoes</a></li>
+                    <li><a href="../newsample/all_shoes.php">All shoes</a></li>
+                    <li><a href="../newsample/all_shoes.php">Accessories</a></li>
+                    <li><a href="../newsample/all_shoes.php">Promotions</a></li>
+                    <li><a href="../newsample/all_shoes.php">Stores</a></li>
+                    <li><a href="../newsample/login.php">Account</a></li>
+                    <li><a href="../newsample/contact.php">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Body -->
+    <div class="container">
+        <div class="title">
+            <h2>Shoes Management:</h2>
+            <h6> HomePage/ShoesManagement</h6>
+        </div>
+
+        <div class="d-fex " >
+            <button type="button" class="btn btn-primary" onclick="showResult()"><i class="fas fa-filter"></i></button>
+            <select class="filter" id="filter" >
+                <option value="Filter">Filter</option>
+                <option value="Manager">Manager</option>
+                <option value="Seller">Seller</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Driver">Driver</option>
+                <option value="Cashier">Cashier</option>
+                <option value="Labor">Labor</option>
+                <option value="WarehouseKeeper">WarehouseKeeper</option>
+                
+                </select>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="myBtn" >
+            <i class="fas fa-plus-circle"></i> Add item
+        </button>
+        </div>
+        
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal" >
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Shoe infomation</h2>
+        </div>
+        <div class="modal-body">
+        <form class="form-group" >
+              <label> ID:</label>
+              <input type="number" class="form-control" name="id" id="id" placeholder="Eg: 1">
+
+          </form>
+          <form class="form-group" >
+              <label> Name:</label>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Eg: Nike Air Force 1 Low">
+
+          </form>
+          <form class="form-group" >
+            <label> Price:</label>
+            <input type="number" class="form-control" name="sale" id="sale" placeholder="Eg: 5000000">
+
+            </form>
+          <form class="form-group" >
+              <label> Origin Price:</label>
+              <input type="number" class="form-control" name="Or_price" id="Or_price" placeholder="Eg: 5000000">
+
+          </form>
+          <form class="form-group" >
+            <label> Brand:</label>
+            
+            <select class="form-control" id="brand">
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="New Balance">New Balance</option>
+                
+                </select>
+
+        </form>
+        <form class="form-group" >
+            <label> Images:</label>
+            <input type="file" class="form-control" name="file" id="file" multiple >
+
+        </form>
+        <form class="form-group" >
+            <label> Amount:</label>
+            <div class="formsize">
+
+            <div class="msize">
+                <label> US 5:</label>
+                <input type="number" class="insize" name="s5" id="s5" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 5.5:</label>
+                <input type="number" class="insize" name="s55" id="s55" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 6:</label>
+                <input type="number" class="insize" name="s6" id="s6" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 6.5:</label>
+                <input type="number" class="insize" name="s65" id="s65" placeholder="Eg: 0">
+            </div>
+
+            <div class="msize">
+                <label> US 7:</label>
+                <input type="number" class="insize" name="s7" id="s7" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 7.5:</label>
+                <input type="number" class="insize" name="s75" id="s75" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 8:</label>
+                <input type="number" class="insize" name="s8" id="s8" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 8.5:</label>
+                <input type="number" class="insize" name="s85" id="s85" placeholder="Eg: 0">
+            </div>
+
+            <div class="msize">
+                <label> US 9:</label>
+                <input type="number" class="insize" name="s9" id="s9" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 95:</label>
+                <input type="number" class="insize" name="s95" id="s95" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 10:</label>
+                <input type="number" class="insize" name="s10" id="s10" placeholder="Eg: 0">
+            </div>
+            <div class="msize">
+                <label> US 10.5:</label>
+                <input type="number" class="insize" name="s105" id="s105" placeholder="Eg: 0">
+            </div>
+
+            </div>
+            
+
+
+        </form>
+          
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="addRecord()">Save</button>
+            
+        </div>
+        </div>
+
+        </div>
+
+        
+            
+        <div id="records-contant">
+        
+        </div>
+        
+
+        
+
+        <!--Update-->
+        <!-- The Modal -->
+        <div id="upModal" class="upmodal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Update staff</h2>
+        </div>
+        <div class="modal-body">
+            <form class="form-group" >
+                  <label> ID:</label>
+                  <input type="number" class="form-control" name="id" id="id" placeholder="Eg: 1">
+    
+              </form>
+              <form class="form-group" >
+                  <label> Name:</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Eg: Nike Air Force 1 Low">
+    
+              </form>
+              <form class="form-group" >
+                <label> Price:</label>
+                <input type="number" class="form-control" name="sale" id="sale" placeholder="Eg: 5000000">
+    
+                </form>
+              <form class="form-group" >
+                  <label> Origin Price:</label>
+                  <input type="number" class="form-control" name="Or_price" id="Or_price" placeholder="Eg: 5000000">
+    
+              </form>
+              <form class="form-group" >
+                <label> Brand:</label>
+                
+                <select class="form-control" id="brand">
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="New Balance">New Balance</option>
+                    
+                    </select>
+    
+            </form>
+            
+            <form class="form-group" >
+                <label> Amount:</label>
+                <div class="formsize">
+    
+                <div class="msize">
+                    <label> US 5:</label>
+                    <input type="number" class="insize" name="s5" id="s5" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 5.5:</label>
+                    <input type="number" class="insize" name="s55" id="s55" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 6:</label>
+                    <input type="number" class="insize" name="s6" id="s6" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 6.5:</label>
+                    <input type="number" class="insize" name="s65" id="s65" placeholder="Eg: 0">
+                </div>
+    
+                <div class="msize">
+                    <label> US 7:</label>
+                    <input type="number" class="insize" name="s7" id="s7" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 7.5:</label>
+                    <input type="number" class="insize" name="s75" id="s75" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 8:</label>
+                    <input type="number" class="insize" name="s8" id="s8" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 8.5:</label>
+                    <input type="number" class="insize" name="s85" id="s85" placeholder="Eg: 0">
+                </div>
+    
+                <div class="msize">
+                    <label> US 9:</label>
+                    <input type="number" class="insize" name="s9" id="s9" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 95:</label>
+                    <input type="number" class="insize" name="s95" id="s95" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 10:</label>
+                    <input type="number" class="insize" name="s10" id="s10" placeholder="Eg: 0">
+                </div>
+                <div class="msize">
+                    <label> US 10.5:</label>
+                    <input type="number" class="insize" name="s105" id="s105" placeholder="Eg: 0">
+                </div>
+    
+                </div>
+                
+    
+    
+            </form>
+              
+            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="addRecord" data-dismiss="modal" onclick="updateuserdatail()">Update</button>
+            <input type="hidden"  id="idedit">
+        </div>
+        </div>
+
+        </div>
+        <!--End Update-->
+
+        <!-- The Modal See -->
+        <div id="seeModal" class="seemodal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="titlesee">
+                    
+                </div>
+                
+
+                
+                <p>CLASSIC COMFORT. VINTAGE LOOK.</p>
+                <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes</p>
+                <p>Benefits <br>
+                    - Leather and synthetic leather upper for durability <br>
+                    - Foam midsole for lightweight cushioning <br>
+                    - Rubber outsole with herringbone pattern for traction <br>
+                    - Colour Shown: White/Varsity Royal/Varsity Red <br>
+                    - Style: 807471-103 <br>
+                    - Country/Region of Origin: Vietnam,Indonesia</p>
+                
+                <div class="showsize" id="showsize">
+                    
+                </div>
+            </div>
+
+        </div>
+        <!--End See-->
+
+
+    </div>
+
+
+    <!---End Body -->
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".ham-burger, .nav ul li a").click(function() {
+
+                $(".nav").toggleClass("open")
+
+                $(".ham-burger").toggleClass("active");
+            })
+            $(".accordian-container").click(function() {
+                $(".accordian-container").children(".body").slideUp();
+                $(".accordian-container").removeClass("active")
+                $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+                $(this).children(".body").slideDown();
+                $(this).addClass("active")
+                $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+            })
+
+            $(".nav ul li a, .go-down").click(function(event) {
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+
+                    // add active class in navigation
+                    $(".nav ul li a").removeClass("active")
+                    $(this).addClass("active")
+                }
+            })
+        })
+    </script>
+    <script>
+        //See modal
+        var seemodal = document.getElementById("seeModal");
+        var seespan = document.getElementsByClassName("close")[2];
+        seespan.onclick = function() {
+            
+            seemodal.style.display = "none";
+        }
+        //Update modal
+        var upmodal = document.getElementById("upModal");
+        var upspan = document.getElementsByClassName("close")[1];
+        upspan.onclick = function() {
+            
+            upmodal.style.display = "none";
+        }
+        
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            
+            } else if (event.target == upmodal) upmodal.style.display = "none";
+            else if (event.target == seemodal) seemodal.style.display = "none";
+        }
+
+
+    </script>
+    <script>
+        $(document).ready(function(){readRecord();});
+
+        function readRecord(){
+            var readrecord= "readrecord";
+
+            $.ajax({
+                url:"classic/shoesdata.php",
+                type:'post',
+                data: {
+                    readrecord:readrecord
+                },
+                success: function(data, status){
+                    $('#records-contant').html(data);
+                },
+            });
+        }
+
+        function addRecord(){
+            
+            var name= $('#name').val();
+            var id= $('#id').val();
+            var sale= $('#sale').val();
+            var opr= $('#Or_price').val();
+            var brand= $('#brand').val();
+            var s50= $('#s5').val();
+            var s55= $('#s55').val();
+            var s60= $('#s6').val();
+            var s65= $('#s65').val();
+            var s70= $('#s7').val();
+            var s75= $('#s75').val();
+            var s80= $('#s8').val();
+            var s85= $('#s85').val();
+            var s90= $('#s9').val();
+            var s95= $('#s95').val();
+            var s00= $('#s10').val();
+            var s05= $('#s105').val();
+            
+
+            var foc;
+            if (( parseInt(id) != id || id < 0) && id != ''){
+                alert("Id must a integer greater than zero");
+                foc=document.getElementById('id');
+                foc.focus();
+                return false;
+            }
+            else if (name=='') {
+                alert("Name is not empty");
+                foc=document.getElementById('name');
+                foc.focus();
+                return false;
+            }
+            else if (sale=='' || parseInt(sale) != sale || sale < 0) {
+                alert("Price must a integer greater than zero");
+                foc=document.getElementById('sale');
+                foc.focus();
+                return false;
+            }
+            else if (opr=='' || parseInt(opr) != opr || opr < 0) {
+                alert("Origin price must a integer greater than zero");
+                foc=document.getElementById('Or_price');
+                foc.focus();
+                return false;
+            }
+            
+            else if (s50=='' || s55=='' || s60=='' || s65=='' || s70=='' || s75=='' ||
+            s80=='' || s85=='' || s90=='' || s95=='' || s00=='' || s05=='' ) alert("Amount is not empty");
+            else if (parseInt(s50) != s50 || parseInt(s55) != s55 || parseInt(s60) != s60 || parseInt(s65) != s65 || parseInt(s70) != s70
+            || parseInt(s75) != s75 || parseInt(s80) != s80|| parseInt(s85) != s85 || parseInt(s90) != s90
+            || parseInt(s95) != s95 || parseInt(s00) != s00 || parseInt(s05) != s05 ) alert("Amount must a integer");
+            else if (s50<0 || s55<0 || s60<0 || s65<0 || s70<0 || s75<0 ||
+            s80<0 || s85<0 || s90<0 || s95<0 || s00<0 || s05<0 ) alert("Amount must be greater than zero");
+            else {
+            $.ajax({
+                url:"classic/shoesdata.php",
+                type:'post',
+                data: {
+                    name:name,
+                    id:id,
+                    sale:sale,
+                    opr:opr,
+                    brand:brand,
+                    s50:s50,
+                    s55:s55,
+                    s60:s60,
+                    s65:s65,
+                    s70:s70,
+                    s75:s75,
+                    s80:s80,
+                    s85:s85,
+                    s90:s90,
+                    s95:s95,
+                    s00:s00,
+                    s05:s05
+                },
+                success: function(data, status){
+                    if (data == '') alert("Id already exist"); else {
+                    $('input').val("");
+                    modal.style.display = "none";
+                    readRecord();
+                    alert("1 item inserted");
+                    }
+                    
+                }, 
+            });
+
+        
+            }
+        }
+
+        function Delete(dataid) {
+            var conf= confirm("Bạn có chắc chắn muốn xóa? ");
+            if (conf==true){
+                $.ajax({
+                url:"classic/shoesdata.php",
+                type:'post',
+                data: {
+                    dataid:dataid
+                },
+                success: function(data, status){
+                    readRecord();
+                },
+                });
+            }
+        }
+
+        function Update(id) {
+
+            $('#idedit').val(id);
+            
+            
+            upmodal.style.display = "block";
+            
+        
+            
+            $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    idup:id
+                },
+                success: function(data, status){
+                    var user= JSON.parse(data);
+                    $('#upname').val(user.FullName);
+                    $('#upid').val(user.id);
+                    $('#upphone').val(user.PhoneNumber);
+                    $('#upaddress').val(user.Address);
+                    $('#upjob').val(user.Position);
+                    
+                },
+                });
+
+            $('#upModal').modal("show");
+            
+        }
+        function updateuserdatail() {
+            var upname=$('#upname').val();
+            var upid=$('#upid').val();
+            var upphone=$('#upphone').val();
+            var upaddress=$('#upaddress').val();
+            var upjob=$('#upjob').val();
+            var index=$('#idedit').val();
+            
+            $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    index:index,
+                    upname:upname,
+                    upid:upid,
+                    upphone:upphone,
+                    upjob:upjob,
+                    upaddress:upaddress
+                    
+                },
+                success: function(data, status){
+                    readRecord();
+                    alert(data);
+                    upmodal.style.display = "none";
+                   
+                },
+            });
+            
+        }
+
+        function Seen(idsee){
+            seemodal.style.display = "block";
+            
+
+            $.ajax({
+                url:"classic/shoesdata.php",
+                type:'post',
+                data: {
+                    idsee:idsee
+                    
+                },
+                success: function(data, status){
+                    
+                    $('.titlesee').html(data);
+                }, 
+            });
+
+            $.ajax({
+                url:"classic/shoesdata.php",
+                type:'post',
+                data: {
+                    idsize:idsee
+                    
+                },
+                success: function(data, status){
+                    
+                    $('#showsize').html(data);
+                }, 
+            });
+
+            
+
+        }
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 0,
+        });
+        wow.init();
+    </script>
+</body>
+
+</html>

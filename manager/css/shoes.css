@@ -190,11 +190,27 @@ header .ham-burger.active span:nth-child(2) {
     animation: goDown 1s ease infinite;
 }
 
-/*Modal Box*/
 
+
+/*Modal Box*/
+.container .title{
+    margin-top: 80px;
+}
+.container .title h6{
+    color: #aaa;
+}
+.container .d-fex{
+    margin-top: 20px;
+    text-align: left;
+    
+}
+.container .filter {
+    padding: 2.5px 10px;
+    font-size: 15px;
+}
 .container #myBtn {
     width: 100px;
-    margin: 70px;
+    float: right;
     font-size: 15px;
     margin-bottom: 10px;
     
@@ -226,14 +242,19 @@ header .ham-burger.active span:nth-child(2) {
 .container .table{
     width: 100%;
     
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
     border-collapse: collapse;
 }
 
 .container .table th,td{
     padding: 5px 0 5px 5px;
-    border: 1px solid #000000;
+    /*border: 1px solid gray;*/
     border-collapse: collapse;
+}
+
+.container .table tr{
+    border-bottom: 1px solid #aaa;
+    
 }
 .container .table .action{
     width: 130px;
@@ -241,6 +262,7 @@ header .ham-burger.active span:nth-child(2) {
 
 .container .table th{
     background-color: #aaa;
+    text-align: left;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
@@ -250,7 +272,7 @@ tr:nth-child(even){background-color: #f2f2f2}
     
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 100; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -259,11 +281,49 @@ tr:nth-child(even){background-color: #f2f2f2}
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
+
+  .upmodal {
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .seemodal {
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .seemodal p{
+    text-align: justify;
+    }
+    .seemodal img{
+    width: 10%;
+    }
+
+    .seemodal .showsize p{
+        color: red;
+    }
   
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     padding-bottom: 60px;
     border: 1px solid #888;
@@ -289,10 +349,57 @@ tr:nth-child(even){background-color: #f2f2f2}
       width: 100%;
       font-size: 20px;
   }
+  .modal #file{
+      width: 80%;
+      margin: 0;
+  }
+  .modal select{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+    }
   .modal .modal-footer{
       margin-top: 10px;
       float: right;
   }
+
+  
+
+  .upmodal input{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+.upmodal select{
+  padding-left: 10px;
+  width: 100%;
+  font-size: 20px;
+  }
+.upmodal .modal-footer{
+    margin-top: 10px;
+    float: right;
+}
+.formsize{
+    width: 100%;
+}
+.msize{
+    width: 25%;
+    float: left;
+    margin-bottom: 5px;
+}
+.formsize:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.msize .insize {
+    width: 70%;
+    float: right;
+}
+.formsize label{
+    margin-left: 5px;
+}
+
 
 @-webkit-keyframes goDown {
     0% {
