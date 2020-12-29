@@ -1,5 +1,5 @@
             <div>
-            <a href="" class="bag"><img src="../newsample/images/icon/bag.png" alt=""></a>
+            <a href="bag.php" class="bag"><img src="../newsample/images/icon/bag.png" alt=""></a>
             <a href="login.php" class="user"><img src="../newsample/images/icon/user.png" alt=""></a>
             <a href="javascript:void(0)" class="ham-burger">
                 <span></span>

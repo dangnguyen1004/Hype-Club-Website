@@ -418,7 +418,22 @@ include "header3.php";
     }
 
     function addShoesToBag() {
-        
+        var username = getCookie('username');
+        var brand_id = <?php echo $_GET['id'] ?>;
+        $.ajax({
+            url: "backend_descript.php",
+            type: 'post',
+            data: {
+                addToCard: 'check',
+                username: username,
+                brand_id: brand_id
+            },
+            success: function(data, status) {
+                console.log(data);
+            }
+        });
+
+
     }
 </script>
 <script src="js/wow.min.js"></script>
