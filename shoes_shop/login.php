@@ -20,7 +20,7 @@
 
             <!-- ############## For Sign in ################################### -->
             <div class="signin-signup">
-                <form class="sign-in-form" method="post" action="../newsample/backend_login.php">
+                <form class="sign-in-form" method="post" action="../shoes_shop/backend_login.php">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -131,7 +131,7 @@
                 if (data == 'fail') {
                     $('#loginResponse').html('Invalid login or password. Please try again.');
                 } else {
-                    window.location.replace("../newsample/account/index.html")
+                    window.location.replace("../shoes_shop/account/index.html")
                 }
             }
         });
@@ -236,7 +236,7 @@
 
     var username = getCookie("username");
     if (username != '') {
-        window.location.replace("../newsample/account/")
+        window.location.replace("../shoes_shop/account/")
     }
 </script>
 

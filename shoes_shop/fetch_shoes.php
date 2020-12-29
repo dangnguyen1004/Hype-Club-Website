@@ -1,8 +1,17 @@
 <?php
     if (isset($_POST['limit']) and isset($_POST['start'])){
         include "conn.php";
-
-        $sql = "SELECT * FROM item ORDER BY id LIMIT ". $_POST['start']. ", ". $_POST['limit'];
+        $brand = 'all';
+        $sql = "";
+        if (isset($_POST['brand'])){
+            $brand = $_POST['brand'];
+        }
+        if ($brand == 'all'){
+            $sql = "SELECT * FROM item ORDER BY id LIMIT ". $_POST['start']. ", ". $_POST['limit'];
+        }
+        else{
+            $sql = "SELECT * FROM item WHERE brand = '$brand' ORDER BY id LIMIT ". $_POST['start']. ", ". $_POST['limit'];
+        }
         $result = mysqli_query($conn,$sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -11,7 +20,7 @@
                 echo '
                 <div class="box" data-wow-delay="'.$delay.'s">
                     <input type="hidden" id="id_item" name="id_item" value="'.$row['id'].'">
-                    <a href="../newsample/description.php?id='.$row['id'].'" style="text-decoration: none;">
+                    <a href="../shoes_shop/description.php?id='.$row['id'].'" style="text-decoration: none;">
                         <div class="inner">
                             <div class="img">';
                         $sql_image = "SELECT * FROM item_image WHERE item_id =". $row['id'];

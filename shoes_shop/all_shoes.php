@@ -2,7 +2,7 @@
 include "header1.php";
 ?>
 <!--them vao <head>-->
-<link rel="stylesheet" href="../newsample/css/allProductStyle.css">
+<link rel="stylesheet" href="../shoes_shop/css/allProductStyle.css">
 <link rel="icon" href="images/iconTitle.svg" type="image/svg">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,10 +21,10 @@ include "header3.php";
     <div class="container">
 
         <div class="top-bar">
-            <div class="inner-bar"><a href="#" class="navOfProduct current" onclick="changeToNav(1); fectchShoesData();">Top Product</a></div>
-            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(2); fetchShoesData();">Nike</a></div>
-            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(3); fetchShoesData();">Adidas</a></div>
-            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(4); fetchShoesData();">New Balance</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct current" onclick="changeToNav(1);"> Product</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(2);">Nike</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(3);">Adidas</a></div>
+            <div class="inner-bar"><a href="#" class="navOfProduct" onclick="changeToNav(4);">New Balance</a></div>
         </div>
 
         <!-- <div class="content2">
@@ -140,18 +140,20 @@ include "header3.php";
 </script>
 <script>
     // ####################### For fetch shoesssssssssssss ############################
+    var brand = 'all';
     function fetchShoesData() {
         var limit = 20;
         var start = 0;
         var action = 'inactive';
 
-        function load_country_data(limit, start) {
+        function load_country_data(limit, start, brand) {
             $.ajax({
                 url: 'fetch_shoes.php',
                 method: 'POST',
                 data: {
                     limit: limit,
-                    start: start
+                    start: start,
+                    brand: brand
                 },
                 cache: false,
                 success: function(data) {
@@ -169,7 +171,7 @@ include "header3.php";
 
         if (action == 'inactive') {
             action = 'active';
-            load_country_data(limit, start);
+            load_country_data(limit, start, brand);
         }
 
         $(window).scroll(function() {
@@ -191,6 +193,34 @@ include "header3.php";
             document.getElementsByClassName('navOfProduct')[i].classList.remove('current');
         }
         document.getElementsByClassName('navOfProduct')[number - 1].classList.add('current');
+        if (number == 1){
+            brand = 'all';
+        }
+        else if (number == 2){
+            brand = 'Nike';
+        }
+        else if (number == 3){
+            brand = 'Adidas';
+        }
+        else if (number == 4){
+            brand = 'New Balance';
+        }
+        function load_country_data(limit, start, brand) {
+            $.ajax({
+                url: 'fetch_shoes.php',
+                method: 'POST',
+                data: {
+                    limit: limit,
+                    start: start,
+                    brand: brand
+                },
+                cache: false,
+                success: function(data) {
+                    $('#load_data').html(data);
+                }
+            });
+        }
+        load_country_data(20,0, brand);
     }
 </script>
 
