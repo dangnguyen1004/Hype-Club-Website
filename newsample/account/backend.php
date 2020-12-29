@@ -38,3 +38,34 @@ if (isset($_POST['updateInfo'])){
         echo 'fail';
     }
 }
+
+
+if (isset($_POST['changePassword'])){
+    $username = $_POST['username'];
+    $oldPassword = $_POST['oldPassword'];
+    $newPassword = $_POST['newPassword'];
+
+    $checkOldPasswordQuery = "SELECT * FROM account WHERE username = '$username';";
+    $resultCheckOldPassword = mysqli_query($conn, $checkOldPasswordQuery);
+    if (mysqli_num_rows($resultCheckOldPassword) > 0){
+        $user = mysqli_fetch_assoc($resultCheckOldPassword);
+        if ($oldPassword == $user['password']){
+            $updatePasswordQuery = "UPDATE account SET password = '$newPassword' WHERE username = '$username';";
+            $resultUpdatePassword = mysqli_query($conn, $updatePasswordQuery);
+            if ($resultUpdatePassword) {;
+                echo 'Update pass successful';
+            }
+            else{
+                echo 'Update fail';
+            }
+        }
+        else{
+            echo 'OldPasswordNotCorrect';
+        }
+    }
+    else{
+        echo 'cant fint username';
+    }
+
+
+}
