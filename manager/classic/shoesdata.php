@@ -5,6 +5,7 @@
     extract($_POST); 
 
     if (isset($_POST['readrecord'])){
+        
         $data= ' <table class="table table-bordered table-striped" >
         <tr>
             <th >ID</th>
@@ -43,7 +44,45 @@
         $data.='</table>';
         echo $data;
     }
+    if (isset($_POST['filter'])){
+        $filter=$_POST['filter'];
+        $data= ' <table class="table table-bordered table-striped" >
+        <tr>
+            <th >ID</th>
+            <th >Brand</th>
+            <th >Name</th>
+            <th >Price</th>
+            <th >Origin-price</th>
+            <th class="action">Action</th>
+            
+            
+        </tr>';
+        $result= mysqli_query($con,"SELECT * FROM item WHERE brand='$filter'");
 
+        if (mysqli_num_rows($result) > 0){
+            $num=1;
+            
+            while($row = mysqli_fetch_array($result))
+            {
+                $data .= '<tr>
+                <td>' . $row['id'] . '</td>
+                <td>' . $row['brand'] . '</td>
+                <td>' . $row['name'] . '</td>
+                <td>' . $row['price'] . '</td>
+                <td>' . $row['origin_price'] . '</td>
+                <td>  
+                    <button onclick="Seen(' .  $row['id'] . ')" class="btn btn-warning"> <i class="far fa-eye"></i></button>
+                    <button onclick="Update(' .  $row['id'] . ')" class="btn btn-warning"> <i class="fas fa-edit"></i></button>
+                    <button onclick="Delete(' . $row['id'] . ')"  class="btn btn-danger"> <i class="far fa-trash-alt"></i></button>
+                </td>
+                </tr>';
+                $num++;
+            }
+        }
+        
+        $data.='</table>';
+        echo $data;
+    }
     if (isset($_POST['name']) ) {
         $name=$_POST['name'];
         $id=$_POST['id'];
@@ -75,11 +114,6 @@
         mysqli_query($con, $query);
             echo $show;
 
-        
-        
-        
-        
-        
     }
 
     if (isset($_POST['dataid'])){
@@ -95,11 +129,15 @@
 
     if (isset($_POST['idup'])){
 
-        $car_id= $_POST['idup'];
+        $up_id= $_POST['idup'];
 
-        $updatequery= "SELECT * FROM `cars` WHERE id='$car_id'";
+        $updatequery= "SELECT * FROM `item` WHERE id='$up_id'";
 
         if (!$result=mysqli_query($con, $updatequery)){
+            exit(mysqli_error());
+        } 
+
+        if (!$result2=mysqli_query($con, "SELECT * FROM `item_size` WHERE id_item='$up_id'")){
             exit(mysqli_error());
         } 
 
@@ -107,7 +145,8 @@
         
         if (mysqli_num_rows($result) >0){
             while($row=mysqli_fetch_assoc($result)){
-                $response=$row;
+                $response['1']=$row;
+                $response['2']=mysqli_fetch_assoc($result2);
             }
         } else {
             $response['status']=200;
@@ -120,24 +159,46 @@
     } 
 
     if (isset($_POST['index'])) {
+        $index=$_POST['index'];
+        $name=$_POST['upname'];
+        $id=$_POST['id'];
+        $sale= $_POST['sale'];
+        $opr= $_POST['opr'];
+        $brand= $_POST['brand'];
+        $s50= $_POST['s50'];
+        $s55= $_POST['s55'];
+        $s60= $_POST['s60'];
+        $s65= $_POST['s65'];
+        $s70= $_POST['s70'];
+        $s75= $_POST['s75'];
+        $s80= $_POST['s80'];
+        $s85= $_POST['s85'];
+        $s90= $_POST['s90'];
+        $s95= $_POST['s95'];
+        $s00= $_POST['s00'];
+        $s05= $_POST['s05'];
         
-        $index= $_POST['index'];
-        $upid= $_POST['upid'];
-        $upname =$_POST['upname'];
-        $upyear=$_POST['upyear'];
-        
-        if ((int)$upid != $upid) echo 'Id must a integer value';
+        $deletequery= "DELETE FROM `item_size` WHERE id_item= '$index'";
 
-        else if (strlen($upname) < 5 || strlen($upname) >40) echo 'Name must in range 5-40 character!';
-        else if ($upyear < 1990 || $upyear > 2015) echo 'Year must in 1990-2015!';
-        else {
-           
-        $query = "UPDATE `cars` SET `id`='$upid',`name`='$upname',`year`='$upyear' WHERE id='$index'";
-           
-            
+        mysqli_query($con, $deletequery);
+        $deletequery= "DELETE FROM `item` WHERE id= '$index'";
+
+        mysqli_query($con, $deletequery);
+
+        $query = "INSERT INTO `item` 
+                VALUES ('$id','$brand','$name','$sale','$opr')";
+
+            $show=mysqli_query($con, $query);
+        $query = "INSERT INTO `item_size` 
+            VALUES (NULL,'$id','$s50','$s55','$s60','$s65','$s70','$s75','$s80','$s85','$s90','$s95','$s00','$s05')";
+
         mysqli_query($con, $query);
         echo 'Đã cập nhật';
-        }
+        
+        
+           
+       
+        
             
         
 
