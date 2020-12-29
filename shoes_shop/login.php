@@ -130,7 +130,10 @@
             success: function(data, status) {
                 if (data == 'fail') {
                     $('#loginResponse').html('Invalid login or password. Please try again.');
-                } else {
+                }
+                else if (data == 'success2'){
+                    window.location.replace("../manager/homemanager.html")
+                } else if (data == 'success1'){
                     window.location.replace("../shoes_shop/account/index.html")
                 }
             }
