@@ -392,11 +392,15 @@ include "header3.php";
 
 
     // ######################## For chose size and add to bag ################################
-    var sizeOfShoes = 0.0;
+    var sizeOfShoes = 6.5;
 
     function choseSize(size) {
         sizeOfShoes = size;
     }
+
+
+
+    
 
     function getCookie(cname) {
         var name = cname + "=";
@@ -414,13 +418,7 @@ include "header3.php";
     }
 
     function addShoesToBag() {
-        var usernameCookie = getCookie('username');
-        if (usernameCookie == '') { // not login 
-            
-        }
-        else{ // login
-
-        }
+        
     }
 </script>
 <script src="js/wow.min.js"></script>
