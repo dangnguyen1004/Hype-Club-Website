@@ -2,7 +2,7 @@
 include "header1.php";
 ?>
 <!--them vao <head>-->
-<link rel="stylesheet" href="../newsample/css/allProductStyle.css">
+<link rel="stylesheet" href="../shoes_shop/css/allProductStyle.css">
 <link rel="icon" href="images/iconTitle.svg" type="image/svg">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

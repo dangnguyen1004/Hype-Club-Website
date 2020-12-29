@@ -26,8 +26,8 @@
             </div>
 
             <div>
-                <a href="" class="bag"><img src="../newsample/images/icon/bag.png" alt=""></a>
-                <a href="account/index.html" class="user"><img src="../newsample/images/icon/user.png" alt=""></a>
+                <a href="" class="bag"><img src="../shoes_shop/images/icon/bag.png" alt=""></a>
+                <a href="account/index.html" class="user"><img src="../shoes_shop/images/icon/user.png" alt=""></a>
                 <a href="javascript:void(0)" class="ham-burger">
                     <span></span>
                     <span></span>
@@ -35,14 +35,14 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="../newsample/shoes_shop.php">Home</a></li>
-                    <li><a href="../newsample/introduce.php">Introduction</a></li>
-                    <li><a href="../newsample/all_shoes.php">All shoes</a></li>
-                    <li><a href="../newsample/all_shoes.php">Accessories</a></li>
-                    <li><a href="../newsample/all_shoes.php">Promotions</a></li>
-                    <li><a href="../newsample/all_shoes.php">Stores</a></li>
-                    <li><a href="../newsample/login.php">Account</a></li>
-                    <li><a href="../newsample/contact.php">Contact</a></li>
+                    <li><a href="../shoes_shop/shoes_shop.php">Home</a></li>
+                    <li><a href="../shoes_shop/introduce.php">Introduction</a></li>
+                    <li><a href="../shoes_shop/all_shoes.php">All shoes</a></li>
+                    <li><a href="../shoes_shop/all_shoes.php">Accessories</a></li>
+                    <li><a href="../shoes_shop/all_shoes.php">Promotions</a></li>
+                    <li><a href="../shoes_shop/all_shoes.php">Stores</a></li>
+                    <li><a href="../shoes_shop/login.php">Account</a></li>
+                    <li><a href="../shoes_shop/contact.php">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -131,7 +131,7 @@
                             <p>classic features leather and synthetic leather</p>
                             <p>construction for added durability and the</p>
                             <p>same vintage vibes.</p>
-                            <a href="../newsample/description.php?id=1" class="btn">Buy Now</a>
+                            <a href="../shoes_shop/description.php?id=1" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                             <p>best. It has a modern design that is</p>
                             <p>convenient and comfortable, with a sleek</p>
                             <p>upper that gives a clean look.</p><br>
-                            <a href="../newsample/description.php?id=3" class="btn">Buy Now</a>
+                            <a href="../shoes_shop/description.php?id=3" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                             <p>like Thinsulate™ and workwear-inspired</p>
                             <p>Scotchlite™, the heavy-duty upper merges</p>
                             <p>everyday utility with style.</p>
-                            <a href="../newsample/description.php?id=4" class="btn">Buy Now</a>
+                            <a href="../shoes_shop/description.php?id=4" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@
                 echo '
                 <div class="box" data-wow-delay="'.$delay.'s">
                     <input type="hidden" id="id_item" name="id_item" value="'.$row['id'].'">
-                    <a href="../newsample/description.php?id='.$row['id'].'" style="text-decoration: none;">
+                    <a href="../shoes_shop/description.php?id='.$row['id'].'" style="text-decoration: none;">
                         <div class="inner">
                             <div class="img">';
                         $sql_image = "SELECT * FROM item_image WHERE item_id =". $row['id'];
