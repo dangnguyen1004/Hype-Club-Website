@@ -9,11 +9,18 @@ if (isset($_POST['checkLogin'])){
     $password = $_POST['password']; 
     $query = "SELECT * FROM account WHERE username = '$userName'";
     $findUserName = mysqli_query($conn, $query);
+
+    $findUserName2 = mysqli_query($conn, "SELECT * FROM staff WHERE PhoneNumber = '$userName'");
     // check account in database
-    if (mysqli_num_rows($findUserName) > 0){
+    if (mysqli_num_rows($findUserName) > 0 || mysqli_num_rows($findUserName2) > 0){
         $accountInfo = mysqli_fetch_assoc($findUserName);
+        $accountInfo2 = mysqli_fetch_assoc($findUserName2);
         if ($password == $accountInfo['password']){
-            $message = 'success';
+            $message = 'success1';
+            setcookie("username", $userName, time() + 3600, "/"); 
+        }
+        else if ($password == $accountInfo2['PhoneNumber']){
+            $message = 'success2';
             setcookie("username", $userName, time() + 3600, "/"); 
         }
         else{ # wrong password

@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/*Header*/
+
+header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: black;
+    padding: 15px 15px;
+    opacity: 0.75;
+}
+
+header .container {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+
+header .logo a span {
+    color: #c11325;
+}
+
+header .nav {
+    position: fixed;
+    background-color: #c11325;
+    width: 280px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 99;
+    padding: 100px 0px 15px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+}
+
+header .nav.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+header .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+
+header .nav ul li {
+    display: block;
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    padding: 10px 30px;
+}
+
+header .nav ul li a.active::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: .2;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+    z-index: -1;
+}
+
+header .nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: #000000;
+    opacity: .2;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+    z-index: -1;
+}
+
+header .nav ul li a:hover::before {
+    width: 100%;
+}
+
+header .ham-burger {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+header .ham-burger span {
+    height: 3px;
+    margin-bottom: 8px;
+    display: block;
+    background-color: #ffffff;
+    width: 30px;
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+}
+
+header .ham-burger span:nth-child(1) {
+    transform-origin: left top;
+}
+
+header .ham-burger span:nth-child(2) {
+    transform-origin: left bottom;
+}
+
+header .ham-burger.active span:nth-child(1) {
+    -webkit-transform: rotate(45deg) translateY(-6px);
+    transform: rotate(45deg) translateY(-6px);
+}
+
+header .ham-burger.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg) translateY(6px);
+    transform: rotate(-45deg) translateY(6px)
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+
+/*Home section*/
+
+.home {
+    height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    padding: 15px;
+    -webkit-display: flex;
+    display: flex;
+    position: relative;
+}
+
+.home .go-down {
+    position: absolute;
+    bottom: 50px;
+    width: 26px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    left: 50%;
+    margin-left: -13px;
+}
+
+.home .go-down .fa {
+    color: #ffffff;
+    -webkit-animation: goDown 1s ease infinite;
+    animation: goDown 1s ease infinite;
+}
+
+/*Modal Box*/
+.container .title{
+    margin-top: 80px;
+}
+.container .title h6{
+    color: #aaa;
+}
+.container .d-fex{
+    margin-top: 20px;
+    text-align: left;
+    
+}
+.container .filter {
+    padding: 2.5px 10px;
+    font-size: 15px;
+}
+.container #myBtn {
+    width: 100px;
+    float: right;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+}
+
+.container .btn {
+    padding: 4px 10px;
+    background-color: #c11325;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    outline: none;
+}
+
+.container .btn:hover {
+    border: 1px solid #222222;
+    color: #222222;
+    background-color: transparent;
+    outline: none;
+}
+
+.container .records-contant{
+    overflow-x:auto;
+}
+.container .table{
+    width: 100%;
+    
+    /*border: 1px solid #000000;*/
+    border-collapse: collapse;
+}
+
+.container .table th,td{
+    padding: 5px 0 5px 5px;
+    /*border: 1px solid gray;*/
+    border-collapse: collapse;
+}
+
+.container .table tr{
+    border-bottom: 1px solid #aaa;
+    
+}
+.container .table .action{
+    width: 130px;
+}
+
+.container .table th{
+    background-color: #aaa;
+    text-align: left;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+/* The Modal (background) */
+.modal {
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .upmodal {
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-bottom: 60px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal input{
+      padding-left: 10px;
+      width: 100%;
+      font-size: 20px;
+  }
+  .modal select{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+    }
+  .modal .modal-footer{
+      margin-top: 10px;
+      float: right;
+  }
+
+  .upmodal input{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+.upmodal select{
+  padding-left: 10px;
+  width: 100%;
+  font-size: 20px;
+  }
+.upmodal .modal-footer{
+    margin-top: 10px;
+    float: right;
+}
+
+@-webkit-keyframes goDown {
+    0% {
+        transform: translateY(0);
+        opacity: .5
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes goDown {
+    0% {
+        transform: translateY(0);
+        opacity: .5
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.home .container {
+    -webkit-display: flex;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.home h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    text-shadow: 5px 5px #1a1919;
+}
+
+.home .title {
+    font-size: 80px;
+}
+.home h1 span {
+    color: #c11325;
+    ;
+}
+
+
+
+
+
+/*if screen width is less than or equal to 991px then*/
+
+@media(max-width: 991px) {
+    .home {
+        background-position: center;
+    }
+    .classes .content {
+        flex-wrap: wrap;
+    }
+    .classes .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .classes .content .img {
+        display: none;
+    }
+    .start-today .content .box {
+        padding: 15px;
+    }
+}
+
+
+/*if screen width is less than or equal to 767px then*/
+
+@media(max-width: 767px) {
+    .home h1 {
+        font-size: 40px;
+    }
+    .about .content {
+        flex-wrap: wrap;
+    }
+    .about .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .service .content {
+        flex-wrap: wrap;
+    }
+    .service .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .classes .content .class-items .item {
+        flex-wrap: wrap;
+    }
+    .classes .content .class-items .item .item-text,
+    .classes .content .class-items .item .item-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .schedule .content {
+        flex-wrap: wrap;
+    }
+    .schedule .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .start-today .content {
+        flex-wrap: wrap;
+    }
+    .start-today .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery .content {
+        flex-wrap: wrap;
+    }
+    .gallery .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .price-package .content {
+        flex-wrap: wrap;
+    }
+    .price-package .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact .content {
+        flex-wrap: wrap;
+    }
+    .contact .content .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/*if screen width is less than or equal to 550px then*/
+
+@media(max-width: 550px) {
+    .home h1 {
+        font-size: 30px;
+    }
+}

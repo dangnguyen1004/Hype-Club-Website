@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hype Club</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/header_icon.css">
+    <link rel="stylesheet" type="text/css" href="css/staff.css">
+    <link rel="icon" href="images/iconTitle.svg" type="image/svg">
+
+    <script src="https://kit.fontawesome.com/a00706d209.js" crossorigin="anonymous"></script>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="shoes_shop.php">Hype<span>!</span>Club</a>
+            </div>
+
+            <div>
+                
+                <a href="../shoes_shop/account/logout.php" class="user"><img src="../shoes_shop/images/icon/user.png" alt=""></a>
+                <a href="javascript:void(0)" class="ham-burger">
+                    <span></span>
+                    <span></span>
+                </a>
+
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="homemanager.html">Home</a></li>
+                    <li><a href="shoes.html">All shoes</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Body -->
+    <div class="container">
+        <div class="title">
+            <h2>Staff Management:</h2>
+            <h6> HomePage/StaffManagement</h6>
+        </div>
+
+        <div class="d-fex " >
+            <button type="button" class="btn btn-primary" onclick="showResult()"><i class="fas fa-filter"></i></button>
+            <select class="filter" id="filter" >
+                <option value="Filter">Filter</option>
+                <option value="Manager">Manager</option>
+                <option value="Seller">Seller</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Driver">Driver</option>
+                <option value="Cashier">Cashier</option>
+                <option value="Labor">Labor</option>
+                <option value="WarehouseKeeper">WarehouseKeeper</option>
+                
+                </select>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="myBtn" >
+            <i class="fas fa-plus-circle"></i> Add item
+        </button>
+        </div>
+
+        
+        
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Add staff</h2>
+        </div>
+        <div class="modal-body">
+        <form class="form-group" >
+              <label> ID:</label>
+              <input type="number" class="form-control" name="id" id="id" placeholder="Eg: 2001">
+
+          </form>
+          <form class="form-group" >
+              <label> Full Name:</label>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Eg: Le Thi Ha">
+
+          </form>
+          
+          <form class="form-group" >
+              <label> Phone Number:</label>
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Eg: 0332989540">
+
+          </form>
+          <form class="form-group" >
+            <label> Address:</label>
+            <input type="text" class="form-control" name="address" id="address" placeholder="Eg: Ho Chi Minh">
+
+            </form>
+
+            <form class="form-group" >
+                <label> Position:</label>
+                
+                <select class="form-control" id="job">
+                    <option value="Manager">Manager</option>
+                    <option value="Seller">Seller</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Driver">Driver</option>
+                    <option value="Cashier">Cashier</option>
+                    <option value="Labor">Labor</option>
+                    <option value="WarehouseKeeper">WarehouseKeeper</option>
+                    
+                    </select>
+    
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="addRecord" data-dismiss="modal" onclick="addRecord()">Save</button>
+            <input type="hidden"  id="idedit">
+        </div>
+        </div>
+
+        </div>
+
+
+
+        
+        <div id="records-contant">
+        
+        </div>
+
+        <!--Update-->
+        <!-- The Modal -->
+        <div id="upModal" class="upmodal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Update staff</h2>
+        </div>
+        <div class="modal-body">
+        <form class="form-group" >
+              <label> ID:</label>
+              <input type="number" class="form-control" name="id" id="upid" placeholder="Eg: 2001">
+
+          </form>
+          <form class="form-group" >
+              <label> Full Name:</label>
+              <input type="text" class="form-control" name="name" id="upname" placeholder="Eg: Le Thi Ha">
+
+          </form>
+          
+          <form class="form-group" >
+              <label> Phone Number:</label>
+              <input type="text" class="form-control" name="phone" id="upphone" placeholder="Eg: 0332989540">
+
+          </form>
+          <form class="form-group" >
+            <label> Address:</label>
+            <input type="text" class="form-control" name="address" id="upaddress" placeholder="Eg: Ho Chi Minh">
+
+            </form>
+
+            <form class="form-group" >
+                <label> Position:</label>
+                
+                <select class="form-control" id="upjob">
+                    <option value="Manager">Manager</option>
+                    <option value="Seller">Seller</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Driver">Driver</option>
+                    <option value="Cashier">Cashier</option>
+                    <option value="Labor">Labor</option>
+                    <option value="WarehouseKeeper">WarehouseKeeper</option>
+                    
+                    </select>
+    
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="addRecord" data-dismiss="modal" onclick="updateuserdatail()">Update</button>
+            
+        </div>
+        </div>
+
+        </div>
+        <!--End Update-->
+
+        
+
+
+    </div>
+
+
+    <!---End Body -->
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".ham-burger, .nav ul li a").click(function() {
+
+                $(".nav").toggleClass("open")
+
+                $(".ham-burger").toggleClass("active");
+            })
+            $(".accordian-container").click(function() {
+                $(".accordian-container").children(".body").slideUp();
+                $(".accordian-container").removeClass("active")
+                $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+                $(this).children(".body").slideDown();
+                $(this).addClass("active")
+                $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+            })
+
+            $(".nav ul li a, .go-down").click(function(event) {
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+
+                    // add active class in navigation
+                    $(".nav ul li a").removeClass("active")
+                    $(this).addClass("active")
+                }
+            })
+        })
+    </script>
+    <script>
+        // Get the modal
+        var filter2 = document.getElementById("myModal");
+        var modal = document.getElementById("myModal");
+        var upmodal = document.getElementById("upModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        var upspan = document.getElementsByClassName("close")[1];
+
+        
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+            
+        }
+        upspan.onclick = function() {
+            
+            upmodal.style.display = "none";
+        }
+
+     
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            upmodal.style.display = "none";
+            }
+        }
+
+
+    </script>
+    <script>
+        $(document).ready(function(){readRecord();});
+
+        function readRecord(){
+            var readrecord= "readrecord";
+
+            $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    readrecord:readrecord
+                },
+                success: function(data, status){
+                    $('#records-contant').html(data);
+                },
+            });
+        }
+        function showResult(){
+            
+            
+            var filter=$('#filter').val();
+            
+            if (filter != "Filter") {
+                $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    filter:filter
+                },
+                success: function(data, status){
+                    $('#records-contant').html(data);
+                },
+                });
+            } else readRecord();
+        }
+
+        function addRecord(){
+            
+            var name= $('#name').val();
+            var id= $('#id').val();
+            var phone= $('#phone').val();
+            var address= $('#address').val();
+            var job= $('#job').val();
+            
+            
+            $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    name:name,
+                    id:id,
+                    phone:phone,
+                    address,address,
+                    job,job
+                },
+                success: function(data, status){
+                    $('#name').val("");
+                    $('#id').val(null);
+                    $('#phone').val("");
+                    $('#address').val("");
+                    
+                    readRecord();
+                    if (data == "Đã thêm"){
+                        modal.style.display = "none";
+                        alert(data);
+                    } else alert(data);
+                    
+                    
+                }, 
+            });
+
+            
+            
+        }
+
+        function Delete(dataid) {
+            var conf= confirm("Bạn có chắc chắn muốn xóa? ");
+            if (conf==true){
+                $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    dataid:dataid
+                },
+                success: function(data, status){
+                    readRecord();
+                },
+                });
+            }
+        }
+
+        function Update(id) {
+
+            $('#idedit').val(id);
+            
+            
+            upmodal.style.display = "block";
+        
+            
+            $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    idup:id
+                },
+                success: function(data, status){
+                    var user= JSON.parse(data);
+                    $('#upname').val(user.FullName);
+                    $('#upid').val(user.id);
+                    $('#upphone').val(user.PhoneNumber);
+                    $('#upaddress').val(user.Address);
+                    $('#upjob').val(user.Position);
+                    
+                },
+                });
+
+            $('#upModal').modal("show");
+            
+        }
+        function updateuserdatail() {
+            var upname=$('#upname').val();
+            var upid=$('#upid').val();
+            var upphone=$('#upphone').val();
+            var upaddress=$('#upaddress').val();
+            var upjob=$('#upjob').val();
+            var index=$('#idedit').val();
+            
+            $.ajax({
+                url:"classic/staffdata.php",
+                type:'post',
+                data: {
+                    index:index,
+                    upname:upname,
+                    upid:upid,
+                    upphone:upphone,
+                    upjob:upjob,
+                    upaddress:upaddress
+                    
+                },
+                success: function(data, status){
+                    readRecord();
+                    alert(data);
+                    upmodal.style.display = "none";
+                   
+                },
+            });
+            
+        }
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 0,
+        });
+        wow.init();
+    </script>
+</body>
+
+</html>

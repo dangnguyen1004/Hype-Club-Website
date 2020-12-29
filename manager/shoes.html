@@ -31,7 +31,7 @@
 
             <div>
                 
-                <a href="../newsample/account/index.html" class="user"><img src="../newsample/images/icon/user.png" alt=""></a>
+                <a href="../shoes_shop/account/logout.php" class="user"><img src="../shoes_shop/images/icon/user.png" alt=""></a>
                 <a href="javascript:void(0)" class="ham-burger">
                     <span></span>
                     <span></span>
@@ -40,14 +40,11 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="homemanager.php">Home</a></li>
+                    <li><a href="homemanager.html">Home</a></li>
                     <li><a href="shoes.html">All shoes</a></li>
-                    <li><a href="../newsample/all_shoes.php">All shoes</a></li>
-                    <li><a href="../newsample/all_shoes.php">Accessories</a></li>
-                    <li><a href="../newsample/all_shoes.php">Promotions</a></li>
-                    <li><a href="../newsample/all_shoes.php">Stores</a></li>
-                    <li><a href="../newsample/login.php">Account</a></li>
-                    <li><a href="../newsample/contact.php">Contact</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    
+                    
                 </ul>
             </div>
         </div>
@@ -65,13 +62,9 @@
             <button type="button" class="btn btn-primary" onclick="showResult()"><i class="fas fa-filter"></i></button>
             <select class="filter" id="filter" >
                 <option value="Filter">Filter</option>
-                <option value="Manager">Manager</option>
-                <option value="Seller">Seller</option>
-                <option value="Accountant">Accountant</option>
-                <option value="Driver">Driver</option>
-                <option value="Cashier">Cashier</option>
-                <option value="Labor">Labor</option>
-                <option value="WarehouseKeeper">WarehouseKeeper</option>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="New Balance">New Balance</option>
                 
                 </select>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="myBtn" >
@@ -119,11 +112,6 @@
                 <option value="New Balance">New Balance</option>
                 
                 </select>
-
-        </form>
-        <form class="form-group" >
-            <label> Images:</label>
-            <input type="file" class="form-control" name="file" id="file" multiple >
 
         </form>
         <form class="form-group" >
@@ -213,33 +201,33 @@
         <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
-            <h2>Update staff</h2>
+            <h2>Update infomation</h2>
         </div>
         <div class="modal-body">
             <form class="form-group" >
                   <label> ID:</label>
-                  <input type="number" class="form-control" name="id" id="id" placeholder="Eg: 1">
+                  <input type="number" class="form-control" name="upid" id="upid" placeholder="Eg: 1">
     
               </form>
               <form class="form-group" >
                   <label> Name:</label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Eg: Nike Air Force 1 Low">
+                  <input type="text" class="form-control" name="upname" id="upname" placeholder="Eg: Nike Air Force 1 Low">
     
               </form>
               <form class="form-group" >
                 <label> Price:</label>
-                <input type="number" class="form-control" name="sale" id="sale" placeholder="Eg: 5000000">
+                <input type="number" class="form-control" name="upsale" id="upsale" placeholder="Eg: 5000000">
     
                 </form>
               <form class="form-group" >
                   <label> Origin Price:</label>
-                  <input type="number" class="form-control" name="Or_price" id="Or_price" placeholder="Eg: 5000000">
+                  <input type="number" class="form-control" name="upOr_price" id="upOr_price" placeholder="Eg: 5000000">
     
               </form>
               <form class="form-group" >
                 <label> Brand:</label>
                 
-                <select class="form-control" id="brand">
+                <select class="form-control" id="upbrand">
                     <option value="Nike">Nike</option>
                     <option value="Adidas">Adidas</option>
                     <option value="New Balance">New Balance</option>
@@ -254,53 +242,53 @@
     
                 <div class="msize">
                     <label> US 5:</label>
-                    <input type="number" class="insize" name="s5" id="s5" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups5" id="ups5" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 5.5:</label>
-                    <input type="number" class="insize" name="s55" id="s55" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups55" id="ups55" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 6:</label>
-                    <input type="number" class="insize" name="s6" id="s6" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups6" id="ups6" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 6.5:</label>
-                    <input type="number" class="insize" name="s65" id="s65" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups65" id="ups65" placeholder="Eg: 0">
                 </div>
     
                 <div class="msize">
                     <label> US 7:</label>
-                    <input type="number" class="insize" name="s7" id="s7" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups7" id="ups7" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 7.5:</label>
-                    <input type="number" class="insize" name="s75" id="s75" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups75" id="ups75" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 8:</label>
-                    <input type="number" class="insize" name="s8" id="s8" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups8" id="ups8" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 8.5:</label>
-                    <input type="number" class="insize" name="s85" id="s85" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups85" id="ups85" placeholder="Eg: 0">
                 </div>
     
                 <div class="msize">
                     <label> US 9:</label>
-                    <input type="number" class="insize" name="s9" id="s9" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups9" id="ups9" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 95:</label>
-                    <input type="number" class="insize" name="s95" id="s95" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups95" id="ups95" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 10:</label>
-                    <input type="number" class="insize" name="s10" id="s10" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups10" id="ups10" placeholder="Eg: 0">
                 </div>
                 <div class="msize">
                     <label> US 10.5:</label>
-                    <input type="number" class="insize" name="s105" id="s105" placeholder="Eg: 0">
+                    <input type="number" class="insize" name="ups105" id="ups105" placeholder="Eg: 0">
                 </div>
     
                 </div>
@@ -328,8 +316,6 @@
                 <div class="titlesee">
                     
                 </div>
-                
-
                 
                 <p>CLASSIC COMFORT. VINTAGE LOOK.</p>
                 <p>Designed by Bill Bowman and released in 1972, the Nike Classic Cortez is Nike's original running shoe. This update on a classic features a leather and synthetic-leather construction for added durability and the same vintage vibes</p>
@@ -459,6 +445,24 @@
                 },
             });
         }
+        function showResult(){
+            
+            
+            var filter=$('#filter').val();
+            
+            if (filter != "Filter") {
+                $.ajax({
+                url:"classic/shoesdata.php",
+                type:'post',
+                data: {
+                    filter:filter
+                },
+                success: function(data, status){
+                    $('#records-contant').html(data);
+                },
+                });
+            } else readRecord();
+        }
 
         function addRecord(){
             
@@ -578,18 +582,32 @@
         
             
             $.ajax({
-                url:"classic/staffdata.php",
+                url:"classic/shoesdata.php",
                 type:'post',
                 data: {
                     idup:id
                 },
                 success: function(data, status){
+                    
                     var user= JSON.parse(data);
-                    $('#upname').val(user.FullName);
-                    $('#upid').val(user.id);
-                    $('#upphone').val(user.PhoneNumber);
-                    $('#upaddress').val(user.Address);
-                    $('#upjob').val(user.Position);
+                    $('#upname').val(user['1'].name);
+                    $('#upid').val(user['1'].id);
+                    $('#upsale').val(user['1'].price);
+                    $('#upOr_price').val(user['1'].origin_price);
+                    $('#upbrand').val(user['1'].brand);
+                    $('#ups5').val(user['2'].size5);
+                    $('#ups55').val(user['2'].size55);
+                    $('#ups6').val(user['2'].size6);
+                    $('#ups65').val(user['2'].size65);
+                    $('#ups7').val(user['2'].size7);
+                    $('#ups75').val(user['2'].size75);
+                    $('#ups8').val(user['2'].size8);
+                    $('#ups85').val(user['2'].size85);
+                    $('#ups9').val(user['2'].size9);
+                    $('#ups95').val(user['2'].size95);
+                    $('#ups10').val(user['2'].size10);
+                    $('#ups105').val(user['2'].size105);
+                    
                     
                 },
                 });
@@ -598,23 +616,82 @@
             
         }
         function updateuserdatail() {
-            var upname=$('#upname').val();
-            var upid=$('#upid').val();
-            var upphone=$('#upphone').val();
-            var upaddress=$('#upaddress').val();
-            var upjob=$('#upjob').val();
-            var index=$('#idedit').val();
             
+            var index=$('#idedit').val();
+
+            var name= $('#upname').val();
+            var id= $('#upid').val();
+            var sale= $('#upsale').val();
+            var opr= $('#upOr_price').val();
+            var brand= $('#upbrand').val();
+            var s50= $('#ups5').val();
+            var s55= $('#ups55').val();
+            var s60= $('#ups6').val();
+            var s65= $('#ups65').val();
+            var s70= $('#ups7').val();
+            var s75= $('#ups75').val();
+            var s80= $('#ups8').val();
+            var s85= $('#ups85').val();
+            var s90= $('#ups9').val();
+            var s95= $('#ups95').val();
+            var s00= $('#ups10').val();
+            var s05= $('#ups105').val();
+            var foc;
+            if (( parseInt(id) != id || id < 0) && id != ''){
+                alert("Id must a integer greater than zero");
+                foc=document.getElementById('upid');
+                foc.focus();
+                return false;
+            }
+            else if (name=='') {
+                alert("Name is not empty");
+                foc=document.getElementById('upname');
+                foc.focus();
+                return false;
+            }
+            else if (sale=='' || parseInt(sale) != sale || sale < 0) {
+                alert("Price must a integer greater than zero");
+                foc=document.getElementById('upsale');
+                foc.focus();
+                return false;
+            }
+            else if (opr=='' || parseInt(opr) != opr || opr < 0) {
+                alert("Origin price must a integer greater than zero");
+                foc=document.getElementById('upOr_price');
+                foc.focus();
+                return false;
+            }
+            
+            else if (s50=='' || s55=='' || s60=='' || s65=='' || s70=='' || s75=='' ||
+            s80=='' || s85=='' || s90=='' || s95=='' || s00=='' || s05=='' ) alert("Amount is not empty");
+            else if (parseInt(s50) != s50 || parseInt(s55) != s55 || parseInt(s60) != s60 || parseInt(s65) != s65 || parseInt(s70) != s70
+            || parseInt(s75) != s75 || parseInt(s80) != s80|| parseInt(s85) != s85 || parseInt(s90) != s90
+            || parseInt(s95) != s95 || parseInt(s00) != s00 || parseInt(s05) != s05 ) alert("Amount must a integer");
+            else if (s50<0 || s55<0 || s60<0 || s65<0 || s70<0 || s75<0 ||
+            s80<0 || s85<0 || s90<0 || s95<0 || s00<0 || s05<0 ) alert("Amount must be greater than zero");
+            else {
             $.ajax({
-                url:"classic/staffdata.php",
+                url:"classic/shoesdata.php",
                 type:'post',
                 data: {
                     index:index,
-                    upname:upname,
-                    upid:upid,
-                    upphone:upphone,
-                    upjob:upjob,
-                    upaddress:upaddress
+                    upname:name,
+                    id:id,
+                    sale:sale,
+                    opr:opr,
+                    brand:brand,
+                    s50:s50,
+                    s55:s55,
+                    s60:s60,
+                    s65:s65,
+                    s70:s70,
+                    s75:s75,
+                    s80:s80,
+                    s85:s85,
+                    s90:s90,
+                    s95:s95,
+                    s00:s00,
+                    s05:s05
                     
                 },
                 success: function(data, status){
@@ -624,6 +701,7 @@
                    
                 },
             });
+            }
             
         }
 
