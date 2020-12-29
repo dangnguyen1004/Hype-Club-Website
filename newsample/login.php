@@ -54,16 +54,15 @@
                 <!-- ######### For sign Up ###################### -->
                 <form action="#" class="sign-up-form" method="post">
                     <h2 class="title">Sign up</h2>
+                    <div class="checkInput" id="checkUsernameResponse"></div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" id="username-signup" required />
                     </div>
-                    <div class="checkInput" id="checkUsernameResponse"></div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Email" id="email-signup" required />
                     </div>
-                    <div class="checkInput" id="checkEmailResponse"></div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" id="psw-signup" required />
@@ -184,10 +183,10 @@
                 success: function(response) {
                     if (response == 'fail') {
                         email_state = false;
-                        $('#checkEmailResponse').html('Already register');
+                        $('#checkUsernameResponse').html('Already register');
                     } else if (response == 'success') {
                         email_state = true;
-                        $('#checkEmailResponse').html('');
+                        $('#checkUsernameResponse').html('');
                     }
                 }
             });
@@ -199,7 +198,7 @@
             var password = $('#psw-signup').val();
             if (username_state == false || email_state == false) {
                 $('#checkUsernameResponse').html('Please enter your username');
-                $('#checkEmailResponse').html('Please enter your email');
+                $('#checkUsernameResponse').html('Please enter your email');
             } else {
                 // proceed with form submission
                 $.ajax({
@@ -212,7 +211,7 @@
                         'password': password
                     },
                     success: function(response) {
-                        alert("sign up oke");
+                        $('#checkUsernameResponse').html('Register successful');
                     }
                 });
             }
