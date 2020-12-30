@@ -170,6 +170,9 @@ header .ham-burger.active span:nth-child(2) {
     display: flex;
     position: relative;
 }
+.home .logo{
+    margin: 0 auto;
+}
 
 .home .go-down {
     position: absolute;
@@ -190,25 +193,19 @@ header .ham-burger.active span:nth-child(2) {
     animation: goDown 1s ease infinite;
 }
 
-@-webkit-keyframes goDown {
-    0% {
-        transform: translateY(0);
-        opacity: .5
-    }
-    100% {
-        transform: translateY(10px);
-    }
+.home .logo a {
+    font-size: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 5px 5px #1a1919;
 }
 
-@keyframes goDown {
-    0% {
-        transform: translateY(0);
-        opacity: .5
-    }
-    100% {
-        transform: translateY(10px);
-    }
+.home .logo a span {
+    color: #c11325;
 }
+
 
 .home .container {
     -webkit-display: flex;
@@ -236,6 +233,27 @@ header .ham-burger.active span:nth-child(2) {
 }
 
 
+
+
+@-webkit-keyframes goDown {
+    0% {
+        transform: translateY(0);
+        opacity: .5
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes goDown {
+    0% {
+        transform: translateY(0);
+        opacity: .5
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
 
 
 
