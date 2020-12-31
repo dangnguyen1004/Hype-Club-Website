@@ -435,6 +435,11 @@ include "header3.php";
 
 
     }
+
+    function buyNow(){
+        addShoesToBag()
+        window.location.replace("bag.php")
+    }
 </script>
 <script src="js/wow.min.js"></script>
 <script>
